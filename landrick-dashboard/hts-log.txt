@@ -1,0 +1,21 @@
+HTTrack3.49-5 launched on Tue, 05 May 2026 17:40:59 at https://shreethemes.in/landrick/dashboard/index.html +shreethemes.in/landrick/* +*.css +*.js +*.png +*.jpg +*.jpeg +*.gif +*.svg +*.webp +*.woff +*.woff2 +fonts.googleapis.com/* +fonts.gstatic.com/* +cdn.jsdelivr.net/* +cdnjs.cloudflare.com/*
+(httrack https://shreethemes.in/landrick/dashboard/index.html -O ./landrick-dashboard +shreethemes.in/landrick/* +*.css +*.js +*.png +*.jpg +*.jpeg +*.gif +*.svg +*.webp +*.woff +*.woff2 +fonts.googleapis.com/* +fonts.gstatic.com/* +cdn.jsdelivr.net/* +cdnjs.cloudflare.com/* -w -r5 -s0 )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:49:56	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/dashboard/assets/libs/fullcalendar/main.min.css (from https://shreethemes.in/landrick/dashboard/calendar.html)
+17:49:56	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/dashboard/agency-blog-detail.html (from https://shreethemes.in/landrick/dashboard/profile.html)
+17:49:56	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/dashboard/blog-about.html (from https://shreethemes.in/landrick/dashboard/blog-detail.html)
+17:49:56	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/dashboard/auth-re-password.html (from https://shreethemes.in/landrick/dashboard/ui-modals.html)
+17:49:56	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/dashboard/auth-signup.html (from https://shreethemes.in/landrick/dashboard/ui-modals.html)
+17:49:56	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/dashboard/page-terms.html (from https://shreethemes.in/landrick/dashboard/invoice.html)
+18:08:29	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/landing/terms.html (from https://shreethemes.in/landrick/landing/index-real-estate.html)
+18:08:29	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/landing/privacy.html (from https://shreethemes.in/landrick/landing/index-real-estate.html)
+18:09:05	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/landing/assets/images/logo-white.png (from https://shreethemes.in/landrick/landing/auth-signup-bg-video.html)
+18:09:05	Error: 	"Not Found" (404) at link https://shreethemes.in/landrick/landing/assets/images/icon-gradient.png (from https://shreethemes.in/landrick/landing/crypto-faqs.html)
+
+HTTrack Website Copier/3.49-5 mirror complete in 28 minutes 6 seconds : 1682 links scanned, 1672 files written (164705216 bytes overall) [139143637 bytes received at 82528 bytes/sec], 30515617 bytes transferred using HTTP compression in 492 files, ratio 14%, 11.9 requests per connection
+(10 errors, 0 warnings, 0 messages)

@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Orlay Pay | Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orlay Pay dashboard for live event order, payment and pickup operations.">
+  <link rel="shortcut icon" href="assets/orlay-icon.png">
+  <link href="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+  <link href="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/css/bootstrap.min.css" class="theme-opt" rel="stylesheet" type="text/css">
+  <link href="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+  <link href="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+  <link href="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
+  <link href="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/css/style.min.css" class="theme-opt" rel="stylesheet" type="text/css">
+  <link href="orlay-polish.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="orlay-dashboard">
+  <div class="page-wrapper toggled">
+    <nav id="sidebar" class="sidebar-wrapper sidebar-dark">
+      <div class="sidebar-content" data-simplebar style="height: calc(100% - 60px);">
+        <div class="sidebar-brand">
+          <a href="index.html">
+            <span class="text-light fw-bold fs-5">Orlay Pay</span>
+          </a>
+        </div>
+
+        <ul class="sidebar-menu">
+          <li class="sidebar-dropdown active">
+            <a href="javascript:void(0)"><i class="ti ti-home me-2"></i>Dashboard</a>
+            <div class="sidebar-submenu d-block">
+              <ul>
+                <li><a href="dashboard.html">Live overview</a></li>
+                <li><a href="#analytics">Post-event analytics</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="javascript:void(0)"><i class="ti ti-map-pin me-2"></i>Aree evento</a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li><a href="#service">Punti bar</a></li>
+                <li><a href="#service">Hospitality e VIP</a></li>
+                <li><a href="#service">Merch pickup</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="javascript:void(0)"><i class="ti ti-shopping-cart me-2"></i>Ordini</a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li><a href="#orders">Ordini live</a></li>
+                <li><a href="#orders">Pickup queue</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="index.html"><i class="ti ti-world me-2"></i>Sito pubblico</a></li>
+        </ul>
+      </div>
+
+      <ul class="sidebar-footer list-unstyled mb-0">
+        <li class="list-inline-item mb-0">
+          <a href="index.html" class="btn btn-icon btn-soft-light"><i class="ti ti-world"></i></a>
+          <small class="text-muted fw-medium ms-1">Website</small>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="page-content bg-light">
+      <div class="top-header">
+        <div class="header-bar d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+            <a href="index.html" class="logo-icon me-3">
+              <img src="assets/orlay-icon.png" height="30" class="small" alt="">
+              <span class="big">
+                <img src="assets/orlay-logo.png" height="24" class="logo-light-mode" alt="Orlay Pay">
+                <img src="assets/orlay-logo.png" height="24" class="logo-dark-mode" alt="Orlay Pay">
+              </span>
+            </a>
+            <a id="close-sidebar" class="btn btn-icon btn-soft-light" href="javascript:void(0)">
+              <i class="ti ti-menu-2"></i>
+            </a>
+            <div class="search-bar p-0 d-none d-md-block ms-2">
+              <div id="search" class="menu-search mb-0">
+                <form role="search" method="get" id="searchform" class="searchform">
+                  <div>
+                    <input type="text" class="form-control border rounded" name="s" id="s" placeholder="Cerca area, ordine, punto bar...">
+                    <input type="submit" id="searchsubmit" value="Search">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <ul class="list-unstyled mb-0">
+            <li class="list-inline-item mb-0">
+              <a href="javascript:void(0)">
+                <div class="btn btn-icon btn-soft-light"><i class="ti ti-settings"></i></div>
+              </a>
+            </li>
+            <li class="list-inline-item mb-0 ms-1">
+              <div class="dropdown dropdown-primary">
+                <button type="button" class="btn btn-icon btn-soft-light dropdown-toggle p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti ti-bell"></i></button>
+                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                  <span class="visually-hidden">New alerts</span>
+                </span>
+                <div class="dropdown-menu dd-menu shadow rounded border-0 mt-3 p-0" data-simplebar style="height: 320px; width: 290px;">
+                  <div class="d-flex align-items-center justify-content-between p-3 border-bottom">
+                    <h6 class="mb-0 text-dark">Notifiche</h6>
+                    <span class="badge bg-soft-danger rounded-pill">4</span>
+                  </div>
+                  <div class="p-3">
+                    <a href="#!" class="dropdown-item features feature-primary key-feature p-0">
+                      <div class="d-flex align-items-center">
+                        <div class="icon text-center rounded-circle me-2"><i class="ti ti-alert-triangle"></i></div>
+                        <div class="flex-1">
+                          <h6 class="mb-0 text-dark title">Bar palco B sopra soglia</h6>
+                          <small class="text-muted">2 min fa</small>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#!" class="dropdown-item features feature-primary key-feature p-0 mt-3">
+                      <div class="d-flex align-items-center">
+                        <div class="icon text-center rounded-circle me-2"><i class="ti ti-ticket"></i></div>
+                        <div class="flex-1">
+                          <h6 class="mb-0 text-dark title">73 ritiri in attesa</h6>
+                          <small class="text-muted">Live</small>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#!" class="dropdown-item features feature-primary key-feature p-0 mt-3">
+                      <div class="d-flex align-items-center">
+                        <div class="icon text-center rounded-circle me-2"><i class="ti ti-wifi"></i></div>
+                        <div class="flex-1">
+                          <h6 class="mb-0 text-dark title">Rete guest attiva</h6>
+                          <small class="text-muted">7 punti collegati</small>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-inline-item mb-0 ms-1">
+              <div class="dropdown dropdown-primary">
+                <button type="button" class="btn btn-soft-light dropdown-toggle p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/images/client/05.jpg" class="avatar avatar-ex-small rounded" alt=""></button>
+                <div class="dropdown-menu dd-menu dropdown-menu-end shadow border-0 mt-3 py-3" style="min-width: 200px;">
+                  <a class="dropdown-item d-flex align-items-center text-dark pb-3" href="javascript:void(0)">
+                    <img src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/images/client/05.jpg" class="avatar avatar-md-sm rounded-circle border shadow" alt="">
+                    <div class="flex-1 ms-2">
+                      <span class="d-block">Event Manager</span>
+                      <small class="text-muted">Orlay Pay Admin</small>
+                    </div>
+                  </a>
+                  <a class="dropdown-item text-dark" href="dashboard.html"><span class="mb-0 d-inline-block me-1"><i class="ti ti-home"></i></span> Dashboard</a>
+                  <a class="dropdown-item text-dark" href="index.html"><span class="mb-0 d-inline-block me-1"><i class="ti ti-world"></i></span> Website</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="layout-specing">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <h6 class="text-muted mb-1">Summer Festival 2026</h6>
+              <h5 class="mb-0">Dashboard Orlay Pay</h5>
+            </div>
+            <div class="mb-0 position-relative">
+              <select class="form-select form-control" id="dailychart">
+                <option selected="">Live event</option>
+                <option>Ultima ora</option>
+                <option>Post-evento</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row row-cols-xl-5 row-cols-md-2 row-cols-1">
+            <div class="col mt-4">
+              <a href="#!" class="features feature-primary d-flex justify-content-between align-items-center rounded shadow p-3">
+                <div class="d-flex align-items-center">
+                  <div class="icon text-center rounded-pill"><i class="uil uil-euro-circle fs-4 mb-0"></i></div>
+                  <div class="flex-1 ms-3">
+                    <h6 class="mb-0 text-muted">Incassato</h6>
+                    <p class="fs-5 text-dark fw-bold mb-0">€<span class="counter-value" data-target="84760">2100</span></p>
+                  </div>
+                </div>
+                <span class="text-success"><i class="uil uil-arrow-growth"></i> 18%</span>
+              </a>
+            </div>
+            <div class="col mt-4">
+              <a href="#!" class="features feature-primary d-flex justify-content-between align-items-center rounded shadow p-3">
+                <div class="d-flex align-items-center">
+                  <div class="icon text-center rounded-pill"><i class="uil uil-shopping-bag fs-4 mb-0"></i></div>
+                  <div class="flex-1 ms-3">
+                    <h6 class="mb-0 text-muted">Ordini</h6>
+                    <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="3428">1200</span></p>
+                  </div>
+                </div>
+                <span class="text-success"><i class="uil uil-arrow-growth"></i> 12%</span>
+              </a>
+            </div>
+            <div class="col mt-4">
+              <a href="#!" class="features feature-primary d-flex justify-content-between align-items-center rounded shadow p-3">
+                <div class="d-flex align-items-center">
+                  <div class="icon text-center rounded-pill"><i class="uil uil-ticket fs-4 mb-0"></i></div>
+                  <div class="flex-1 ms-3">
+                    <h6 class="mb-0 text-muted">Pickup</h6>
+                    <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="73">12</span></p>
+                  </div>
+                </div>
+                <span class="text-danger"><i class="uil uil-chart-down"></i> Code</span>
+              </a>
+            </div>
+            <div class="col mt-4">
+              <a href="#!" class="features feature-primary d-flex justify-content-between align-items-center rounded shadow p-3">
+                <div class="d-flex align-items-center">
+                  <div class="icon text-center rounded-pill"><i class="uil uil-store fs-4 mb-0"></i></div>
+                  <div class="flex-1 ms-3">
+                    <h6 class="mb-0 text-muted">Punti attivi</h6>
+                    <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="18">4</span></p>
+                  </div>
+                </div>
+                <span class="text-muted"><i class="uil uil-analysis"></i> Live</span>
+              </a>
+            </div>
+            <div class="col mt-4">
+              <a href="#!" class="features feature-primary d-flex justify-content-between align-items-center rounded shadow p-3">
+                <div class="d-flex align-items-center">
+                  <div class="icon text-center rounded-pill"><i class="uil uil-users-alt fs-4 mb-0"></i></div>
+                  <div class="flex-1 ms-3">
+                    <h6 class="mb-0 text-muted">Fan serviti</h6>
+                    <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="15200">2100</span></p>
+                  </div>
+                </div>
+                <span class="text-success"><i class="uil uil-arrow-growth"></i> 9%</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-8 col-lg-7 mt-4">
+              <div class="card shadow border-0 p-4 pb-0 rounded">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-0 fw-bold">Ordini e pickup live</h6>
+                  <div class="mb-0 position-relative">
+                    <select class="form-select form-control" id="yearchart">
+                      <option selected>21:00 - 22:00</option>
+                      <option>20:00 - 21:00</option>
+                      <option>Post-evento</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="dashboard" class="apex-chart"></div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-5 mt-4 rounded" id="service">
+              <div class="card shadow border-0">
+                <div class="p-4 border-bottom">
+                  <div class="d-flex justify-content-between">
+                    <h6 class="mb-0 fw-bold">Aree critiche</h6>
+                    <a href="#!" class="text-primary">Vedi tutte <i class="uil uil-arrow-right align-middle"></i></a>
+                  </div>
+                </div>
+                <div class="p-4" data-simplebar style="height: 365px;">
+                  <a href="javascript:void(0)" class="features feature-danger key-feature d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <div class="icon text-center rounded-circle me-3"><i class="ti ti-alert-triangle"></i></div>
+                      <div class="flex-1">
+                        <h6 class="mb-0 text-dark">Bar palco B</h6>
+                        <small class="text-muted">Congestione 92%</small>
+                      </div>
+                    </div>
+                    <i class="ti ti-arrow-up text-warning"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="features feature-warning key-feature d-flex align-items-center justify-content-between mt-4">
+                    <div class="d-flex align-items-center">
+                      <div class="icon text-center rounded-circle me-3"><i class="ti ti-tools-kitchen"></i></div>
+                      <div class="flex-1">
+                        <h6 class="mb-0 text-dark">Food court nord</h6>
+                        <small class="text-muted">Domanda 86%</small>
+                      </div>
+                    </div>
+                    <i class="ti ti-arrow-up text-warning"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="features feature-success key-feature d-flex align-items-center justify-content-between mt-4">
+                    <div class="d-flex align-items-center">
+                      <div class="icon text-center rounded-circle me-3"><i class="ti ti-crown"></i></div>
+                      <div class="flex-1">
+                        <h6 class="mb-0 text-dark">VIP lounge</h6>
+                        <small class="text-muted">Flusso 64%</small>
+                      </div>
+                    </div>
+                    <i class="ti ti-arrow-down text-success"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="features feature-primary key-feature d-flex align-items-center justify-content-between mt-4">
+                    <div class="d-flex align-items-center">
+                      <div class="icon text-center rounded-circle me-3"><i class="ti ti-shirt"></i></div>
+                      <div class="flex-1">
+                        <h6 class="mb-0 text-dark">Merch pickup</h6>
+                        <small class="text-muted">Flusso 51%</small>
+                      </div>
+                    </div>
+                    <i class="ti ti-arrow-down text-success"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="analytics">
+            <div class="col-xl-4">
+              <div class="row">
+                <div class="col-xl-12 mt-4">
+                  <div class="card rounded shadow border-0 p-4">
+                    <div class="d-flex justify-content-between mb-4">
+                      <h6 class="mb-0">Report per area</h6>
+                      <div class="text-end">
+                        <h5 class="mb-0">18</h5>
+                        <h6 class="text-muted mb-0">Punti</h6>
+                      </div>
+                    </div>
+                    <div id="sale-chart"></div>
+                  </div>
+                </div>
+                <div class="col-xl-12 mt-4">
+                  <div class="card rounded shadow border-0 p-4">
+                    <div class="d-flex justify-content-between mb-4">
+                      <h6 class="mb-0">Top categorie</h6>
+                      <div class="text-end">
+                        <h6 class="text-muted mb-0">Live mix</h6>
+                      </div>
+                    </div>
+                    <div id="top-product-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-8 mt-4" id="orders">
+              <div class="card border-0">
+                <div class="d-flex justify-content-between p-4 shadow rounded-top">
+                  <h6 class="fw-bold mb-0">Ordini e pickup</h6>
+                  <ul class="list-unstyled mb-0">
+                    <li class="dropdown dropdown-primary list-inline-item">
+                      <button type="button" class="btn btn-icon btn-pills btn-soft-primary dropdown-toggle p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti ti-dots-vertical"></i></button>
+                      <div class="dropdown-menu dd-menu dropdown-menu-end shadow border-0 mt-3 py-3">
+                        <a class="dropdown-item text-dark" href="#"> Pagati</a>
+                        <a class="dropdown-item text-dark" href="#"> Pickup</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="table-responsive shadow rounded-bottom" data-simplebar style="height: 575px;">
+                  <table class="table table-center bg-white mb-0">
+                    <thead>
+                      <tr>
+                        <th class="border-bottom p-3">No.</th>
+                        <th class="border-bottom p-3">Area</th>
+                        <th class="text-center border-bottom p-3">Stato</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="p-3">#OP-2048<br><small class="text-muted fw-normal">€28,00</small></th>
+                        <td class="p-3"><a href="#" class="text-primary"><div class="d-flex align-items-center"><img src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/images/client/01.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt=""><span class="ms-2">Bar palco B</span></div></a></td>
+                        <td class="text-center p-3"><div class="badge bg-soft-success rounded px-3 py-1">Pagato</div></td>
+                      </tr>
+                      <tr>
+                        <th class="p-3">#OP-2047<br><small class="text-muted fw-normal">€64,50</small></th>
+                        <td class="p-3"><a href="#" class="text-primary"><div class="d-flex align-items-center"><img src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/images/client/02.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt=""><span class="ms-2">VIP terrace</span></div></a></td>
+                        <td class="text-center p-3"><div class="badge bg-soft-primary rounded px-3 py-1">Pronto</div></td>
+                      </tr>
+                      <tr>
+                        <th class="p-3">#OP-2046<br><small class="text-muted fw-normal">€19,00</small></th>
+                        <td class="p-3"><a href="#" class="text-primary"><div class="d-flex align-items-center"><img src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/images/client/03.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt=""><span class="ms-2">Food court nord</span></div></a></td>
+                        <td class="text-center p-3"><div class="badge bg-soft-warning rounded px-3 py-1">Banco</div></td>
+                      </tr>
+                      <tr>
+                        <th class="p-3">#OP-2045<br><small class="text-muted fw-normal">€42,00</small></th>
+                        <td class="p-3"><a href="#" class="text-primary"><div class="d-flex align-items-center"><img src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/images/client/04.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt=""><span class="ms-2">Merch pickup</span></div></a></td>
+                        <td class="text-center p-3"><div class="badge bg-soft-danger rounded px-3 py-1">In coda</div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="shadow py-3">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="text-sm-start text-center mx-md-2">
+                <p class="mb-0 text-muted">© <script>document.write(new Date().getFullYear())</script> Orlay Pay.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/libs/feather-icons/feather.min.js"></script>
+  <script src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/libs/simplebar/simplebar.min.js"></script>
+  <script src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/libs/apexcharts/apexcharts.min.js"></script>
+  <script>
+    document.querySelectorAll(".counter-value").forEach((counter) => {
+      const target = Number(counter.getAttribute("data-target"));
+      const step = Math.max(1, Math.ceil(target / 90));
+      const update = () => {
+        const current = Number(counter.textContent);
+        if (current < target) {
+          counter.textContent = Math.min(target, current + step);
+          window.setTimeout(update, 12);
+        } else {
+          counter.textContent = target;
+        }
+      };
+      update();
+    });
+
+    if (window.ApexCharts && document.querySelector("#dashboard")) {
+      new ApexCharts(document.querySelector("#dashboard"), {
+        chart: { height: 360, type: "area", width: "100%", stacked: true, animations: { enabled: false }, toolbar: { show: false, autoSelected: "zoom" } },
+        colors: ["#2f55d4", "#2eca8b"],
+        dataLabels: { enabled: false },
+        stroke: { curve: "smooth", width: [1.5, 1.5], dashArray: [0, 4], lineCap: "round" },
+        grid: { padding: { left: 0, right: 0 }, strokeDashArray: 3 },
+        markers: { size: 0, hover: { size: 0 } },
+        series: [
+          { name: "Ordini", data: [0, 96, 42, 118, 64, 148, 58, 138, 70, 186, 82, 124] },
+          { name: "Pickup", data: [0, 46, 16, 80, 38, 104, 45, 122, 34, 112, 72, 118] }
+        ],
+        xaxis: { categories: ["20:00", "20:10", "20:20", "20:30", "20:40", "20:50", "21:00", "21:10", "21:20", "21:30", "21:40", "21:50"], axisBorder: { show: true }, axisTicks: { show: true } },
+        fill: { type: "gradient", gradient: { shadeIntensity: 0.8, opacityFrom: 0.3, opacityTo: 0.2, stops: [0, 80, 100] } },
+        legend: { position: "bottom", offsetY: 0 }
+      }).render();
+    }
+
+    if (window.ApexCharts && document.querySelector("#sale-chart")) {
+      new ApexCharts(document.querySelector("#sale-chart"), {
+        chart: { type: "bar", height: 100, animations: { enabled: false }, sparkline: { enabled: true } },
+        colors: ["#2f55d4"],
+        plotOptions: { bar: { columnWidth: "30%" } },
+        series: [{ name: "Conversione", data: [42, 56, 63, 58, 61, 54, 66, 44, 39, 68, 47, 52, 82, 59, 46, 24, 18, 12, 23, 20, 29, 48, 55, 88, 74, 70, 61, 52, 66, 72] }],
+        tooltip: { x: { show: false }, y: { title: { formatter: () => "" } }, marker: { show: false } }
+      }).render();
+    }
+
+    if (window.ApexCharts && document.querySelector("#top-product-chart")) {
+      new ApexCharts(document.querySelector("#top-product-chart"), {
+        chart: { height: 320, type: "donut", animations: { enabled: false } },
+        series: [42, 26, 18, 14],
+        labels: ["Food", "Beverage", "VIP", "Merch"],
+        legend: { show: true, position: "bottom", offsetY: 0 },
+        dataLabels: { enabled: true, dropShadow: { enabled: false } },
+        stroke: { show: true, colors: ["transparent"] },
+        theme: { monochrome: { enabled: true, color: "#2f55d4" } },
+        responsive: [{ breakpoint: 768, options: { chart: { height: 400 } } }]
+      }).render();
+    }
+  </script>
+  <script src="landrick-dashboard/shreethemes.in/landrick/dashboard/assets/js/app.js"></script>
+</body>
+</html>
