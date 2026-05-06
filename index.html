@@ -1,436 +1,357 @@
 <!doctype html>
-<html lang="it" dir="ltr">
+<html lang="it">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Orlay Pay | Continuità di vendita per eventi live</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Orlay Pay protegge ordine, pagamento e ritiro negli eventi live ad alta affluenza.">
-  <link rel="shortcut icon" href="assets/orlay-icon.png">
-  <link href="landrick-dashboard/shreethemes.in/landrick/landing/assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
-  <link href="landrick-dashboard/shreethemes.in/landrick/landing/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="landrick-dashboard/shreethemes.in/landrick/landing/assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
-  <link href="landrick-dashboard/shreethemes.in/landrick/landing/assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
-  <link href="landrick-dashboard/shreethemes.in/landrick/landing/assets/css/style.min.css" rel="stylesheet" type="text/css">
-  <link href="orlay-polish.css" rel="stylesheet" type="text/css">
+  <meta name="description" content="Orlay Pay aiuta organizzatori, venue e operatori food & beverage a ridurre code, rinunce e perdita di vendite negli eventi live ad alta affluenza.">
+  <link rel="icon" href="assets/orlay-icon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto</a>
 
-<body class="orlay-landing">
-  <header id="topnav" class="defaultscroll sticky">
-    <div class="container">
-      <a class="logo" href="index.html">
-        <img src="assets/orlay-logo.png" height="30" class="logo-light-mode" alt="Orlay Pay">
-        <img src="assets/orlay-logo.png" height="30" class="logo-dark-mode" alt="Orlay Pay">
-      </a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Orlay Pay">
+      <img src="assets/orlay-logo.png" alt="Orlay Pay" width="145" height="38">
+    </a>
 
-      <div class="menu-extras">
-        <div class="menu-item">
-          <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
-            <div class="lines"><span></span><span></span><span></span></div>
-          </a>
-        </div>
-      </div>
+    <nav class="site-nav" aria-label="Navigazione principale">
+      <a href="#problema">Problema</a>
+      <a href="#soluzione">Soluzione</a>
+      <a href="#controllo">Controllo live</a>
+      <a href="#demo">Demo</a>
+    </nav>
 
-      <ul class="buy-button list-inline mb-0">
-        <li class="list-inline-item ps-1 mb-0">
-          <a href="#demo" class="btn btn-primary">Richiedi demo</a>
-        </li>
-      </ul>
-
-      <div id="navigation">
-        <ul class="navigation-menu">
-          <li><a href="#problema" class="sub-menu-item">Problema</a></li>
-          <li><a href="#soluzione" class="sub-menu-item">Soluzione</a></li>
-          <li><a href="#operativita" class="sub-menu-item">Operatività</a></li>
-          <li><a href="#analytics" class="sub-menu-item">Analytics</a></li>
-          <li><a href="dashboard.html" class="sub-menu-item">Dashboard</a></li>
-        </ul>
-      </div>
-    </div>
+    <a class="nav-cta" href="#demo">Richiedi una demo</a>
   </header>
 
-  <section class="bg-half-170 pb-0 d-table w-100">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="title-heading text-center mt-4">
-            <div class="orlay-hero-icon mx-auto"><i class="uil uil-ticket"></i></div>
-            <h6 class="text-primary mt-3 fw-bold">ORDER · PAYMENT · PICKUP</h6>
-            <h1 class="heading mb-3">Continuità di vendita per eventi live ad alta affluenza</h1>
-            <p class="para-desc mx-auto text-muted">Orlay Pay protegge ordine, pagamento e ritiro quando traffico, rete e operatività si complicano. Il picco di domanda diventa il momento più profittevole, non il più critico.</p>
-            <div class="mt-4 pt-2">
-              <a href="#demo" class="btn btn-primary">Richiedi una demo <i class="uil uil-angle-right-b"></i></a>
-              <a href="dashboard.html" class="btn btn-outline-primary ms-2">Apri dashboard</a>
-            </div>
-          </div>
+  <main id="main">
+    <section class="hero section-shell" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Continuità di vendita per eventi live ad alta affluenza</p>
+        <h1>Il pubblico è già lì. Non perdere vendite nei momenti di picco.</h1>
+        <p class="hero-text">Orlay Pay aiuta organizzatori, venue e operatori food &amp; beverage a rendere ordine, incasso e ritiro più fluidi: meno code, meno rinunce, più controllo operativo.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#demo">Richiedi una demo</a>
+          <p class="microline">Food &amp; beverage · Hospitality · Aree VIP · Punti bar · Merchandising</p>
+        </div>
+      </div>
 
-          <div class="row justify-content-center mt-lg-4 mt-3 orlay-hero-cards">
-            <div class="col-md-6 mt-4 pt-2">
-              <div class="card rounded shadow bg-light border-0 orlay-flow-card">
-                <div class="card-body py-5">
-                  <div class="orlay-card-icon"><i class="uil uil-shopping-bag"></i></div>
-                  <div class="mt-4">
-                    <h5>Ordine già strutturato</h5>
-                    <div class="d-flex justify-content-between">
-                      <p class="h6 text-muted mb-0">Fan web app</p>
-                      <h6 class="mb-0">QR <span class="text-muted">browser</span></h6>
-                    </div>
-                  </div>
+      <div class="hero-visual reveal" aria-label="Console operativa Orlay Pay">
+        <div class="hero-orb" aria-hidden="true"></div>
+        <div class="live-console">
+          <div class="console-sidebar">
+            <img src="assets/orlay-logo.png" alt="" width="96" height="25">
+            <span class="side-pill is-active">Live</span>
+            <span class="side-pill">Punti bar</span>
+            <span class="side-pill">Aree VIP</span>
+            <span class="side-pill">Ritiri</span>
+          </div>
+          <div class="console-main">
+            <div class="console-topbar">
+              <div>
+                <span class="status-dot"></span>
+                <strong>Summer Festival 2026</strong>
+              </div>
+              <span class="live-badge">Evento in corso</span>
+            </div>
+            <div class="kpi-grid">
+              <article class="kpi-card">
+                <span>Incassato</span>
+                <strong data-count="84760">€84.760</strong>
+                <small>+18% nella finestra live</small>
+              </article>
+              <article class="kpi-card">
+                <span>Ordini</span>
+                <strong data-count="3428">3.428</strong>
+                <small>642 in attesa ritiro</small>
+              </article>
+              <article class="kpi-card">
+                <span>Ticket medio</span>
+                <strong>€24,72</strong>
+                <small>Food court in crescita</small>
+              </article>
+            </div>
+            <div class="console-grid">
+              <article class="chart-panel">
+                <div class="panel-head">
+                  <strong>Andamento nel tempo</strong>
+                  <span>Ultimi 60 min</span>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mt-4 pt-2">
-              <div class="card rounded shadow bg-dark border-0 orlay-flow-card">
-                <div class="card-body py-5">
-                  <div class="orlay-card-icon is-dark"><i class="uil uil-credit-card"></i></div>
-                  <div class="mt-4">
-                    <h5 class="text-light">Pagamento dal telefono</h5>
-                    <div class="d-flex justify-content-between">
-                      <p class="h6 text-muted mb-0">Online o banco</p>
-                      <h6 class="mb-0 text-muted">Live <span class="text-muted">flow</span></h6>
-                    </div>
-                  </div>
+                <svg class="line-chart" viewBox="0 0 520 190" role="img" aria-label="Grafico andamento incassi e ordini">
+                  <path class="chart-fill" d="M0 151 C60 132 78 136 130 112 C184 88 204 99 255 72 C314 40 347 68 390 39 C444 3 468 28 520 12 L520 190 L0 190 Z"></path>
+                  <path class="chart-line" d="M0 151 C60 132 78 136 130 112 C184 88 204 99 255 72 C314 40 347 68 390 39 C444 3 468 28 520 12"></path>
+                </svg>
+              </article>
+              <article class="zones-panel">
+                <div class="panel-head">
+                  <strong>Aree critiche</strong>
+                  <span>Ora</span>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mt-4 pt-2">
-              <div class="card rounded shadow bg-info border-0 orlay-flow-card">
-                <div class="card-body py-5">
-                  <div class="orlay-card-icon is-info"><i class="uil uil-map-marker"></i></div>
-                  <div class="mt-4">
-                    <h5 class="text-white">Pickup sempre visibile</h5>
-                    <div class="d-flex justify-content-between">
-                      <p class="h6 text-light mb-0">Stato, mappa, info</p>
-                      <h6 class="mb-0 text-light">06:24</h6>
-                    </div>
-                  </div>
+                <div class="zone-row">
+                  <span>Bar Main Stage</span>
+                  <meter min="0" max="100" value="82"></meter>
+                  <strong>82%</strong>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mt-4 pt-2">
-              <div class="card rounded shadow bg-light border-0 orlay-flow-card">
-                <div class="card-body py-5">
-                  <div class="orlay-card-icon"><i class="uil uil-wifi"></i></div>
-                  <div class="mt-4">
-                    <div class="input-group mb-3">
-                      <input type="text" class="form-control" value="Rete guest locale" aria-label="Rete guest locale">
-                      <button class="btn btn-primary" type="button">Attiva</button>
-                    </div>
-                  </div>
+                <div class="zone-row">
+                  <span>Hospitality Nord</span>
+                  <meter min="0" max="100" value="64"></meter>
+                  <strong>64%</strong>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section pb-0" id="problema">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <div class="section-title">
-            <h4 class="title mb-4">La vendita si perde prima del pagamento</h4>
-            <p class="text-muted para-desc mb-0 mx-auto">Il fan rinuncia se non capisce subito cosa comprare, dove andare o quanto dovrà aspettare. Ogni passaggio in più abbassa conversione e scontrino medio.</p>
-          </div>
-          <div class="mt-4 orlay-process-icons">
-            <a href="javascript:void(0)"><img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/icon/food-and-restaurant.svg" class="img-fluid avatar avatar-small mx-2 mt-4 rounded-circle shadow" data-bs-toggle="tooltip" data-bs-placement="top" title="Menu poco chiaro" alt=""></a>
-            <a href="javascript:void(0)"><img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/icon/clock.svg" class="img-fluid avatar avatar-small mx-2 mt-4 rounded-circle shadow" data-bs-toggle="tooltip" data-bs-placement="top" title="Code e attesa" alt=""></a>
-            <a href="javascript:void(0)"><img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/icon/customer-service.svg" class="img-fluid avatar avatar-small mx-2 mt-4 rounded-circle shadow" data-bs-toggle="tooltip" data-bs-placement="top" title="Staff sotto pressione" alt=""></a>
-            <a href="javascript:void(0)"><img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/icon/speedometer.svg" class="img-fluid avatar avatar-small mx-2 mt-4 rounded-circle shadow" data-bs-toggle="tooltip" data-bs-placement="top" title="Dati troppo tardi" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mt-100 mt-60" id="soluzione">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <div class="section-title mb-4 pb-2">
-            <h4 class="title mb-4">Orlay Pay libera il potenziale di vendita dei grandi eventi</h4>
-            <p class="text-muted para-desc mb-0 mx-auto">Lo stesso servizio resta fluido anche quando cambia il modo di pagamento. Il cliente arriva deciso, lo staff accelera il flusso e ogni punto bar diventa un moltiplicatore di vendite.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-          <div class="card bg-light rounded shadow border-0 orlay-feature-card">
-            <div class="card-body py-5">
-              <i class="uil uil-shopping-cart h2 text-primary"></i>
-              <div class="mt-2">
-                <h5 class="card-title"><a href="javascript:void(0)" class="text-primary">Più ordini completati</a></h5>
-                <p class="text-muted mt-3 mb-0">Meno rinunce nelle finestre di massima domanda.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-          <div class="card bg-light rounded shadow border-0 orlay-feature-card">
-            <div class="card-body py-5">
-              <i class="uil uil-bolt h2 text-primary"></i>
-              <div class="mt-2">
-                <h5 class="card-title"><a href="javascript:void(0)" class="text-primary">Banco più veloce</a></h5>
-                <p class="text-muted mt-3 mb-0">Pre-ordine, incasso e consegna nello stesso processo.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-          <div class="card bg-light rounded shadow border-0 orlay-feature-card">
-            <div class="card-body py-5">
-              <i class="uil uil-map-marker h2 text-primary"></i>
-              <div class="mt-2">
-                <h5 class="card-title"><a href="javascript:void(0)" class="text-primary">Percorsi dedicati</a></h5>
-                <p class="text-muted mt-3 mb-0">VIP, hospitality, merch e pickup diventano più leggibili.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-          <div class="card bg-light rounded shadow border-0 orlay-feature-card">
-            <div class="card-body py-5">
-              <i class="uil uil-chart-line h2 text-primary"></i>
-              <div class="mt-2">
-                <h5 class="card-title"><a href="javascript:void(0)" class="text-primary">Dati per area</a></h5>
-                <p class="text-muted mt-3 mb-0">Decisioni su pricing, staffing e layout basate sui dati.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mt-100 mt-60" id="operativita">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <div class="section-title mb-5 pb-2">
-            <h4 class="title mb-4">Ordine, pagamento e pickup nello stesso flusso</h4>
-            <p class="text-muted para-desc mb-0 mx-auto">Se la rete mobile non basta, l'acquisto non si ferma: il fan continua dal telefono, mentre il banco resta sempre l'ultima opzione.</p>
-          </div>
-          <img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/payments/payment/seller-order.png" alt="Orlay Pay flow" class="position-relative img-fluid mx-auto d-block" style="z-index: 1;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="position-relative">
-    <div class="shape overflow-hidden text-light">
-      <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
-      </svg>
-    </div>
-  </div>
-
-  <section class="section bg-light" id="analytics">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <div class="section-title mb-4 pb-2">
-            <h4 class="title mb-4">Per fan, staff e organizzatore</h4>
-            <p class="text-muted para-desc mb-0 mx-auto">Orlay Pay non è solo pagamento: è un layer operativo che rende l'evento più semplice, veloce e leggibile.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-12 pt-2 mt-2 text-center">
-          <div class="tiny-three-item">
-            <div class="tiny-slide">
-              <div class="card client-testi m-2 text-center rounded shadow border-0">
-                <div class="card-body">
-                  <p class="text-muted h6 fst-italic">"Meno stress, meno attese, più fluidità: menu, pagamento e ritiro restano chiari dal telefono."</p>
-                  <img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/icon/smartphone.svg" class="img-fluid avatar avatar-small mt-3 rounded-circle mx-auto shadow" alt="">
-                  <h6 class="text-primary mt-3">Fan <small class="text-muted">Experience</small></h6>
+                <div class="zone-row">
+                  <span>Merch Gate B</span>
+                  <meter min="0" max="100" value="47"></meter>
+                  <strong>47%</strong>
                 </div>
-              </div>
-            </div>
-            <div class="tiny-slide">
-              <div class="card client-testi m-2 text-center rounded shadow border-0">
-                <div class="card-body">
-                  <p class="text-muted h6 fst-italic">"Il pre-ordine arriva strutturato: totale, stato e prossima azione sono già visibili al banco."</p>
-                  <img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/icon/customer-service.svg" class="img-fluid avatar avatar-small mt-3 rounded-circle mx-auto shadow" alt="">
-                  <h6 class="text-primary mt-3">Staff <small class="text-muted">Operations</small></h6>
-                </div>
-              </div>
-            </div>
-            <div class="tiny-slide">
-              <div class="card client-testi m-2 text-center rounded shadow border-0">
-                <div class="card-body">
-                  <p class="text-muted h6 fst-italic">"Aree, menu, listini, incassi e ritiri sono sotto controllo da una sola regia."</p>
-                  <img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/icon/speedometer.svg" class="img-fluid avatar avatar-small mt-3 rounded-circle mx-auto shadow" alt="">
-                  <h6 class="text-primary mt-3">Organizer <small class="text-muted">Control</small></h6>
-                </div>
-              </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container mt-100 mt-60" id="demo">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <div class="section-title mb-4 pb-2">
-            <h4 class="title mb-4">Analytics durante e dopo l'evento</h4>
-            <p class="text-muted para-desc mb-0 mx-auto">Performance per area, fascia oraria, punto di servizio e categoria. Insight concreti per il prossimo evento, non solo report finali.</p>
+    <section class="section-shell split-section" id="problema">
+      <div class="section-intro reveal">
+        <p class="eyebrow">Il collo di bottiglia</p>
+        <h2>La vendita si perde prima del pagamento.</h2>
+        <p>Quando l’affluenza cresce, il punto di servizio diventa il collo di bottiglia: il pubblico aspetta, ordina meno o rinuncia. Lo staff gestisce confusione invece di servire. L’organizzatore vede i dati quando è troppo tardi.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="info-card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 18h16M7 14h10M9 10h6M12 3v3M5 7h14"></path></svg>
+          </span>
+          <h3>Code e doppia attesa</h3>
+          <p>Il fan perde tempo tra scelta, pagamento e ritiro.</p>
+        </article>
+        <article class="info-card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M4 13a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v5h5"></path></svg>
+          </span>
+          <h3>Staff sotto pressione</h3>
+          <p>Il banco rallenta quando deve ricostruire ordini, importi e prossime azioni.</p>
+        </article>
+        <article class="info-card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"></path><path d="M3 19h18"></path></svg>
+          </span>
+          <h3>Dati frammentati</h3>
+          <p>A fine evento è difficile capire dove si è persa domanda.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell solution-section" id="soluzione">
+      <div class="section-intro centered reveal">
+        <p class="eyebrow">Regia operativa</p>
+        <h2>Una regia unica per trasformare il servizio in ricavo.</h2>
+        <p>Orlay Pay rende più leggibile il percorso del fan, più veloce il lavoro dello staff e più chiaro il controllo dell’organizzatore. Il risultato è un evento più ordinato nei momenti critici.</p>
+      </div>
+      <div class="card-grid four">
+        <article class="benefit-card reveal">
+          <span class="number">01</span>
+          <h3>Più ordini completati</h3>
+          <p>Soprattutto nelle finestre di massima domanda.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <span class="number">02</span>
+          <h3>Più velocità al banco</h3>
+          <p>Meno passaggi manuali, meno errori, meno improvvisazione.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <span class="number">03</span>
+          <h3>Più controllo per zona</h3>
+          <p>Ordini, incassi, ritiri e performance leggibili per area.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <span class="number">04</span>
+          <h3>Più valore post-evento</h3>
+          <p>Dati utili per decidere pricing, staffing e layout successivi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell product-section" id="controllo">
+      <div class="section-intro reveal">
+        <p class="eyebrow">Vista organizzatore</p>
+        <h2>Controllo live dell’evento.</h2>
+        <p>Monitora ordini, incassi, ritiri, punti di servizio e aree critiche da una sola vista operativa.</p>
+      </div>
+      <figure class="product-frame reveal">
+        <img src="pitckdeckimages/section11-dashboard.png" alt="Dashboard Orlay Pay con KPI, stato evento, incassi, ordini e performance live" loading="eager" width="838" height="478">
+        <figcaption>Capisci dove la domanda cresce, dove il servizio rallenta e cosa correggere durante l’evento.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section-shell map-section" id="mappa">
+      <div class="section-intro reveal">
+        <p class="eyebrow">Percorsi e aree</p>
+        <h2>L’evento diventa più leggibile.</h2>
+        <p>Aree, tempi e percorsi diventano leggibili per pubblico e staff, così ogni punto di servizio sa cosa fare nei momenti di picco.</p>
+      </div>
+      <div class="wayfinding-panel reveal" aria-label="Console percorsi e aree evento">
+        <div class="wayfinding-head">
+          <div>
+            <span>Summer Festival</span>
+            <strong>Aree operative</strong>
+          </div>
+          <span class="sync-pill">Live sync</span>
+        </div>
+        <div class="wayfinding-body">
+          <div class="zone-list">
+            <article class="zone-card is-busy">
+              <span class="zone-type">Food court</span>
+              <strong>12 min</strong>
+              <p>Coda alta, apri ritiro B</p>
+            </article>
+            <article class="zone-card">
+              <span class="zone-type">Punti bar</span>
+              <strong>5 min</strong>
+              <p>Flusso regolare</p>
+            </article>
+            <article class="zone-card">
+              <span class="zone-type">Area VIP</span>
+              <strong>3 min</strong>
+              <p>Accesso dedicato</p>
+            </article>
+          </div>
+          <aside class="wayfinding-action" aria-label="Aggiornamento operativo suggerito">
+            <span>Priorità ora</span>
+            <strong>Ribilancia i ritiri</strong>
+            <p>Il punto food court supera la soglia: invia staff al ritiro B e mostra il percorso migliore nella fan app.</p>
+          </aside>
+        </div>
+        <div class="route-board">
+          <div class="route-step is-active">
+            <span>01</span>
+            <strong>Ordine</strong>
+            <p>Menu e disponibilità per zona</p>
+          </div>
+          <div class="route-step">
+            <span>02</span>
+            <strong>Pagamento</strong>
+            <p>Checkout dal telefono</p>
+          </div>
+          <div class="route-step">
+            <span>03</span>
+            <strong>Ritiro</strong>
+            <p>Punto e tempo stimato chiari</p>
+          </div>
+        </div>
+        <div class="update-grid">
+          <div>
+            <span class="update-dot"></span>
+            <p>Push staff</p>
+            <strong>Apri corsia veloce</strong>
+          </div>
+          <div>
+            <span class="update-dot is-green"></span>
+            <p>Fan app</p>
+            <strong>Mostra percorso migliore</strong>
           </div>
         </div>
       </div>
+      <p class="caption reveal">Utile per food court, bar, hospitality, VIP, merch e punti di ritiro dedicati.</p>
+    </section>
 
-      <div class="row align-items-center">
-        <div class="col-lg-5 col-md-6 col-12 mt-4 pt-2">
-          <div class="card bg-light shadow rounded border-0">
-            <div class="bg-primary bg-gradient p-4 text-center rounded-top">
-              <h4 class="mb-0 card-title title-dark text-white">Live event plan</h4>
-            </div>
-            <div class="card-body">
-              <div class="d-flex justify-content-center mb-4">
-                <span class="price text-primary fw-bold display-4 mb-0">18</span>
-                <span class="h6 align-self-end fw-bold text-uppercase mb-2 ms-2">Punti attivi</span>
-              </div>
-              <ul class="feature list-inline">
-                <li class="h6 mt-2 fw-normal"><i data-feather="check-circle" class="fea icon-ex-md text-primary me-2"></i>Food & beverage</li>
-                <li class="h6 mt-2 fw-normal"><i data-feather="check-circle" class="fea icon-ex-md text-primary me-2"></i>Hospitality e VIP</li>
-                <li class="h6 mt-2 fw-normal"><i data-feather="check-circle" class="fea icon-ex-md text-primary me-2"></i>Merchandising e pickup</li>
-                <li class="h6 mt-2 fw-normal"><i data-feather="check-circle" class="fea icon-ex-md text-primary me-2"></i>Post-event analytics</li>
-              </ul>
-              <div class="d-grid">
-                <a href="dashboard.html" class="btn btn-primary mt-4 pt-2">Visualizza dashboard</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7 col-md-6 col-12 mt-4 pt-2">
-          <div class="card rounded border-0 shadow">
-            <div class="bg-light p-4 text-center rounded-top">
-              <h4 class="mb-0 card-title text-primary">Richiedi una demo</h4>
-            </div>
-            <div class="card-body">
-              <form>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label class="form-label">Nome</label>
-                      <input type="text" class="form-control fw-bold" placeholder="Nome">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label class="form-label">Azienda / venue</label>
-                      <input type="text" class="form-control fw-bold" placeholder="Azienda">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label class="form-label">Email</label>
-                      <input type="email" class="form-control fw-bold" placeholder="email@azienda.com">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label class="form-label">Tipo evento</label>
-                      <input type="text" class="form-control fw-bold" placeholder="Festival, stadio, venue">
-                    </div>
-                  </div>
-                </div>
-                <input type="submit" class="submitBnt btn btn-primary" value="Richiedi demo">
-              </form>
-            </div>
-          </div>
-        </div>
+    <section class="section-shell audience-section" id="target">
+      <div class="section-intro centered reveal">
+        <p class="eyebrow">Contesti ideali</p>
+        <h2>Pensato per eventi dove ogni minuto di coda costa ricavo.</h2>
+        <p>Orlay Pay è adatto a contesti con alta densità di pubblico, più punti di servizio e domanda concentrata in finestre brevi.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <div class="section-title">
-            <h4 class="title mb-4">Trasforma i punti di servizio da collo di bottiglia a leva di ricavo</h4>
-            <p class="text-muted para-desc mb-0 mx-auto">Il pubblico è già lì. Orlay Pay aiuta a convertire ogni momento in ordine completato, servizio più fluido e dato operativo utile.</p>
-          </div>
-          <div class="contact-detail mt-5">
-            <a href="#demo" class="btn btn-primary mt-3">Parla con Orlay Pay</a>
-          </div>
-        </div>
+      <div class="chip-grid reveal" aria-label="Tipologie di eventi">
+        <span>Festival</span>
+        <span>Concerti</span>
+        <span>Stadi e palazzetti</span>
+        <span>Food court</span>
+        <span>Hospitality</span>
+        <span>Aree VIP</span>
+        <span>Merchandising</span>
+        <span>Eventi corporate</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="footer-py-60">
-            <div class="row">
-              <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
-                <a href="#" class="logo-footer">
-                  <img src="assets/orlay-logo.png" height="30" alt="Orlay Pay">
-                </a>
-                <p class="mt-4">Continuità di vendita per eventi live ad alta affluenza: ordine, pagamento e pickup in un solo processo.</p>
-              </div>
-              <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                <h5 class="footer-head">Soluzione</h5>
-                <ul class="list-unstyled footer-list mt-4">
-                  <li><a href="#problema" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Problema</a></li>
-                  <li><a href="#soluzione" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Soluzione</a></li>
-                  <li><a href="#analytics" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Analytics</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                <h5 class="footer-head">Use case</h5>
-                <ul class="list-unstyled footer-list mt-4">
-                  <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Festival</a></li>
-                  <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Stadi e palazzetti</a></li>
-                  <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Hospitality e VIP</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                <h5 class="footer-head">Demo</h5>
-                <p class="mt-4">Valuta flussi, punti bar, aree critiche e opportunità di ricavo.</p>
-                <a href="#demo" class="btn btn-soft-primary">Richiedi demo</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="section-shell analytics-section" id="analytics">
+      <div class="analytics-copy reveal">
+        <p class="eyebrow">Post-evento</p>
+        <h2>Il valore non finisce a fine serata.</h2>
+        <p>Leggi cosa converte, cosa rallenta e dove si perde domanda. Usa i dati per migliorare pricing, staffing, layout e offerta del prossimo evento.</p>
       </div>
-    </div>
+      <div class="mini-grid">
+        <article class="mini-card reveal">
+          <span class="mini-label">Aree</span>
+          <h3>Performance per area</h3>
+          <strong>+18%</strong>
+          <p>Quali zone vendono e quali rallentano.</p>
+        </article>
+        <article class="mini-card reveal">
+          <span class="mini-label">Picchi</span>
+          <h3>Picchi reali</h3>
+          <strong>21:40</strong>
+          <p>Quando la domanda cresce davvero.</p>
+        </article>
+        <article class="mini-card reveal">
+          <span class="mini-label">Prodotti</span>
+          <h3>Mix prodotti</h3>
+          <strong>Top 12</strong>
+          <p>Cosa viene scelto, cosa resta indietro.</p>
+        </article>
+        <article class="mini-card reveal">
+          <span class="mini-label">Azioni</span>
+          <h3>Decisioni migliori</h3>
+          <strong>4 leve</strong>
+          <p>Meno percezioni, più evidenze operative.</p>
+        </article>
+      </div>
+    </section>
 
-    <div class="footer-py-30 footer-bar">
-      <div class="container text-center">
-        <div class="row align-items-center">
-          <div class="col-sm-6">
-            <div class="text-sm-start">
-              <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Orlay Pay.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
-            <ul class="list-unstyled text-sm-end mb-0">
-              <li class="list-inline-item"><img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/payments/master-card.png" class="avatar avatar-ex-sm" alt=""></li>
-              <li class="list-inline-item"><img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/payments/paypal.png" class="avatar avatar-ex-sm" alt=""></li>
-              <li class="list-inline-item"><img src="landrick-dashboard/shreethemes.in/landrick/landing/assets/images/payments/visa.png" class="avatar avatar-ex-sm" alt=""></li>
-            </ul>
-          </div>
-        </div>
+    <section class="section-shell final-section" id="demo">
+      <div class="final-copy reveal">
+        <p class="eyebrow">Demo Orlay Pay</p>
+        <h2>Vuoi capire dove il tuo evento sta perdendo vendite?</h2>
+        <p>Prenota una demo: analizziamo insieme flussi, punti bar, aree critiche e opportunità di ricavo.</p>
+        <a class="button primary" href="#demo-form">Richiedi una demo</a>
       </div>
-    </div>
+
+      <form class="demo-form reveal" id="demo-form" data-demo-form>
+        <div class="form-row">
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="company">Azienda / venue</label>
+          <input id="company" name="company" type="text" autocomplete="organization" required>
+        </div>
+        <div class="form-row">
+          <label for="event-type">Tipo di evento</label>
+          <input id="event-type" name="event-type" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Telefono</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="form-row full">
+          <label for="message">Messaggio opzionale</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button class="button primary full" type="submit">Richiedi una demo</button>
+        <p class="privacy">Ti ricontattiamo solo per valutare il progetto Orlay Pay più adatto al tuo evento.</p>
+        <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/orlay-logo.png" alt="Orlay Pay" width="118" height="31">
+    <span>Continuità di vendita per eventi live ad alta affluenza.</span>
   </footer>
 
-  <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fs-5"><i data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>
-
-  <script src="landrick-dashboard/shreethemes.in/landrick/landing/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="landrick-dashboard/shreethemes.in/landrick/landing/assets/libs/tiny-slider/min/tiny-slider.js"></script>
-  <script src="landrick-dashboard/shreethemes.in/landrick/landing/assets/libs/feather-icons/feather.min.js"></script>
-  <script src="landrick-dashboard/shreethemes.in/landrick/landing/assets/js/plugins.init.js"></script>
-  <script src="landrick-dashboard/shreethemes.in/landrick/landing/assets/js/app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
