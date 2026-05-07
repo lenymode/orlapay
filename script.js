@@ -3,6 +3,21 @@ const form = document.querySelector("[data-demo-form]");
 const message = document.querySelector("[data-form-message]");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const revealItems = [...document.querySelectorAll(".reveal")];
+const themeToggle = document.querySelector("[data-theme-toggle]");
+const storedTheme = localStorage.getItem("orlay-theme");
+const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+const setTheme = (theme) => {
+  document.body.dataset.theme = theme;
+
+  if (!themeToggle) return;
+
+  const isDark = theme === "dark";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.setAttribute("aria-label", isDark ? "Passa alla modalità chiara" : "Passa alla modalità scura");
+};
+
+setTheme(storedTheme || preferredTheme);
 
 const setHeaderState = () => {
   if (!header) return;
@@ -30,6 +45,14 @@ window.addEventListener("scroll", () => {
   setHeaderState();
   setActiveNav();
 }, { passive: true });
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+    localStorage.setItem("orlay-theme", nextTheme);
+    setTheme(nextTheme);
+  });
+}
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {
