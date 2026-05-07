@@ -30,7 +30,7 @@
     <section class="hero section-shell" id="top">
       <div class="hero-copy reveal">
         <p class="eyebrow">Continuità di vendita per eventi live ad alta affluenza</p>
-        <h1>Il pubblico è già lì. Non perdere vendite nei momenti di picco.</h1>
+        <h1>Il pubblico è già lì. Non perdere <span class="hero-highlight">vendite nei momenti di picco.</span></h1>
         <p class="hero-text">Orlay Pay aiuta organizzatori, venue e operatori food &amp; beverage a rendere ordine, incasso e ritiro più fluidi: meno code, meno rinunce, più controllo operativo.</p>
         <div class="hero-actions">
           <a class="button primary" href="#demo">Richiedi una demo</a>
@@ -41,20 +41,27 @@
       <div class="hero-visual reveal" aria-label="Console operativa Orlay Pay">
         <div class="hero-orb" aria-hidden="true"></div>
         <div class="live-console">
-          <div class="console-sidebar">
-            <img src="assets/orlay-logo.png" alt="" width="96" height="25">
-            <span class="side-pill is-active">Live</span>
-            <span class="side-pill">Punti bar</span>
-            <span class="side-pill">Aree VIP</span>
-            <span class="side-pill">Ritiri</span>
-          </div>
           <div class="console-main">
+            <div class="console-brandbar">
+              <img src="assets/orlay-logo.png" alt="" width="112" height="29">
+              <div class="console-tabs" aria-label="Viste dashboard">
+                <span class="is-active">Live</span>
+                <span>Punti bar</span>
+                <span>Aree VIP</span>
+                <span>Ritiri</span>
+              </div>
+            </div>
             <div class="console-topbar">
               <div>
                 <span class="status-dot"></span>
                 <strong>Summer Festival 2026</strong>
               </div>
               <span class="live-badge">Evento in corso</span>
+            </div>
+            <div class="console-status-strip" aria-label="Stato operativo live">
+              <span>Gate A</span>
+              <span>21:35</span>
+              <span>3 alert</span>
             </div>
             <div class="kpi-grid">
               <article class="kpi-card">
@@ -106,36 +113,55 @@
                 </div>
               </article>
             </div>
+            <div class="console-action-row">
+              <span>Priorità operativa</span>
+              <strong>Apri ritiro B</strong>
+              <small>Bar Main Stage supera la soglia</small>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-shell split-section" id="problema">
+    <section class="section-shell split-section problem-section" id="problema">
       <div class="section-intro reveal">
         <p class="eyebrow">Il collo di bottiglia</p>
         <h2>La vendita si perde prima del pagamento.</h2>
-        <p>Quando l’affluenza cresce, il punto di servizio diventa il collo di bottiglia: il pubblico aspetta, ordina meno o rinuncia. Lo staff gestisce confusione invece di servire. L’organizzatore vede i dati quando è troppo tardi.</p>
+        <p>Quando l’affluenza cresce, il punto di servizio diventa il collo di bottiglia: il pubblico aspetta, ordina meno o rinuncia. Lo staff gestisce confusione invece di servire.</p>
+        <div class="pressure-panel" aria-label="Scenario operativo durante un picco evento">
+          <span>Picco live</span>
+          <strong>21:35</strong>
+          <p>Domanda alta, staff saturo, dati ancora frammentati.</p>
+        </div>
       </div>
       <div class="card-grid three">
         <article class="info-card reveal">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 18h16M7 14h10M9 10h6M12 3v3M5 7h14"></path></svg>
-          </span>
+          <div class="info-card-head">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 18h16M7 14h10M9 10h6M12 3v3M5 7h14"></path></svg>
+            </span>
+            <strong class="pain-metric">2x</strong>
+          </div>
           <h3>Code e doppia attesa</h3>
           <p>Il fan perde tempo tra scelta, pagamento e ritiro.</p>
         </article>
         <article class="info-card reveal">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M4 13a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v5h5"></path></svg>
-          </span>
+          <div class="info-card-head">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M4 13a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v5h5"></path></svg>
+            </span>
+            <strong class="pain-metric">+38%</strong>
+          </div>
           <h3>Staff sotto pressione</h3>
           <p>Il banco rallenta quando deve ricostruire ordini, importi e prossime azioni.</p>
         </article>
         <article class="info-card reveal">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"></path><path d="M3 19h18"></path></svg>
-          </span>
+          <div class="info-card-head">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"></path><path d="M3 19h18"></path></svg>
+            </span>
+            <strong class="pain-metric">T+1</strong>
+          </div>
           <h3>Dati frammentati</h3>
           <p>A fine evento è difficile capire dove si è persa domanda.</p>
         </article>
@@ -285,24 +311,28 @@
           <h3>Performance per area</h3>
           <strong>+18%</strong>
           <p>Quali zone vendono e quali rallentano.</p>
+          <div class="mini-insight"><span>Area calda</span><i aria-hidden="true"></i></div>
         </article>
         <article class="mini-card reveal">
           <span class="mini-label">Picchi</span>
           <h3>Picchi reali</h3>
           <strong>21:40</strong>
           <p>Quando la domanda cresce davvero.</p>
+          <div class="mini-insight"><span>Picco domanda</span><i aria-hidden="true"></i></div>
         </article>
         <article class="mini-card reveal">
           <span class="mini-label">Prodotti</span>
           <h3>Mix prodotti</h3>
           <strong>Top 12</strong>
           <p>Cosa viene scelto, cosa resta indietro.</p>
+          <div class="mini-insight"><span>Mix vincente</span><i aria-hidden="true"></i></div>
         </article>
         <article class="mini-card reveal">
           <span class="mini-label">Azioni</span>
           <h3>Decisioni migliori</h3>
           <strong>4 leve</strong>
           <p>Meno percezioni, più evidenze operative.</p>
+          <div class="mini-insight"><span>Prossime azioni</span><i aria-hidden="true"></i></div>
         </article>
       </div>
     </section>
