@@ -17,6 +17,8 @@
   --soft-shadow: 0 18px 52px rgba(7, 16, 21, 0.08);
   --radius: 8px;
   --container: 1180px;
+  --font-body: "Titillium Web", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: var(--font-body);
 }
 
 body[data-theme="dark"] {
@@ -50,7 +52,7 @@ body {
     radial-gradient(circle at 14% 12%, rgba(53, 176, 213, 0.18), transparent 27rem),
     radial-gradient(circle at 86% 7%, rgba(24, 168, 121, 0.12), transparent 25rem),
     linear-gradient(180deg, #f5fbfd 0%, #ffffff 43%, #f3fafc 100%);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   letter-spacing: 0;
   overflow-x: hidden;
   transition: background 220ms ease, color 220ms ease;
@@ -120,25 +122,29 @@ figure {
 h1 {
   max-width: 780px;
   margin-bottom: 24px;
+  font-family: var(--font-display);
   font-size: clamp(46px, 6vw, 82px);
-  font-weight: 880;
-  line-height: 0.98;
+  font-weight: 700;
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 18px;
   color: var(--ink);
+  font-family: var(--font-display);
   font-size: clamp(34px, 4vw, 58px);
-  font-weight: 860;
-  line-height: 1.02;
+  font-weight: 700;
+  line-height: 1.06;
   letter-spacing: 0;
 }
 
 h3 {
   margin-bottom: 10px;
   color: var(--ink);
+  font-family: var(--font-display);
   font-size: 20px;
+  font-weight: 600;
   line-height: 1.22;
   letter-spacing: 0;
 }
@@ -2403,7 +2409,7 @@ textarea:focus {
 .phone-notes article span {
   color: var(--cyan-dark);
   font-size: 11px;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -2572,7 +2578,7 @@ textarea:focus {
   background: var(--cyan-soft);
   color: var(--cyan-dark);
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .experience-layers strong {
@@ -2717,7 +2723,7 @@ textarea:focus {
   background: var(--cyan-soft);
   color: var(--cyan-dark);
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .app-benefit-list strong,
@@ -2801,7 +2807,7 @@ textarea:focus {
   margin-bottom: 8px;
   color: var(--cyan-dark);
   font-size: 11px;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -2912,7 +2918,7 @@ textarea:focus {
   background: var(--cyan-soft);
   color: var(--cyan-dark);
   font-size: 10px;
-  font-weight: 900;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -3104,7 +3110,7 @@ body[data-theme="dark"] .dashboard-visual {
 .safari-status {
   color: var(--green);
   font-size: 11px;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -3139,7 +3145,7 @@ body[data-theme="dark"] .dashboard-visual {
   margin-bottom: 10px;
   color: var(--muted);
   font-size: 11px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.25;
   text-transform: uppercase;
 }
