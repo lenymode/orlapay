@@ -17,7 +17,9 @@
   --soft-shadow: 0 18px 52px rgba(7, 16, 21, 0.08);
   --radius: 8px;
   --container: 1440px;
-  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body:
+    "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: var(--font-body);
 }
 
@@ -49,19 +51,37 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 14% 12%, rgba(53, 176, 213, 0.18), transparent 27rem),
-    radial-gradient(circle at 86% 7%, rgba(24, 168, 121, 0.12), transparent 25rem),
+    radial-gradient(
+      circle at 14% 12%,
+      rgba(53, 176, 213, 0.18),
+      transparent 27rem
+    ),
+    radial-gradient(
+      circle at 86% 7%,
+      rgba(24, 168, 121, 0.12),
+      transparent 25rem
+    ),
     linear-gradient(180deg, #f5fbfd 0%, #ffffff 43%, #f3fafc 100%);
   font-family: var(--font-body);
   letter-spacing: 0;
   overflow-x: hidden;
-  transition: background 220ms ease, color 220ms ease;
+  transition:
+    background 220ms ease,
+    color 220ms ease;
 }
 
 body[data-theme="dark"] {
   background:
-    radial-gradient(circle at 12% 10%, rgba(53, 176, 213, 0.19), transparent 30rem),
-    radial-gradient(circle at 86% 4%, rgba(24, 168, 121, 0.13), transparent 25rem),
+    radial-gradient(
+      circle at 12% 10%,
+      rgba(53, 176, 213, 0.19),
+      transparent 30rem
+    ),
+    radial-gradient(
+      circle at 86% 4%,
+      rgba(24, 168, 121, 0.13),
+      transparent 25rem
+    ),
     linear-gradient(180deg, #071015 0%, #0a171d 46%, #061014 100%);
 }
 
@@ -76,16 +96,32 @@ body::after {
 
 body::before {
   background:
-    radial-gradient(ellipse at 50% -12%, color-mix(in srgb, var(--cyan) 18%, transparent), transparent 54%),
-    radial-gradient(ellipse at 92% 18%, color-mix(in srgb, var(--green) 12%, transparent), transparent 42%),
-    radial-gradient(ellipse at 10% 78%, color-mix(in srgb, var(--cyan) 10%, transparent), transparent 46%);
+    radial-gradient(
+      ellipse at 50% -12%,
+      color-mix(in srgb, var(--cyan) 18%, transparent),
+      transparent 54%
+    ),
+    radial-gradient(
+      ellipse at 92% 18%,
+      color-mix(in srgb, var(--green) 12%, transparent),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 10% 78%,
+      color-mix(in srgb, var(--cyan) 10%, transparent),
+      transparent 46%
+    );
   opacity: 0.86;
 }
 
 body::after {
   z-index: -1;
   background:
-    radial-gradient(ellipse at 70% 24%, color-mix(in srgb, var(--cyan) 8%, transparent), transparent 34%),
+    radial-gradient(
+      ellipse at 70% 24%,
+      color-mix(in srgb, var(--cyan) 8%, transparent),
+      transparent 34%
+    ),
     radial-gradient(ellipse at 48% 100%, rgba(7, 16, 21, 0.08), transparent 54%);
   opacity: 0.92;
 }
@@ -184,7 +220,12 @@ p {
   min-height: 78px;
   margin: 0 auto;
   padding: 16px 0;
-  transition: width 180ms ease, padding 180ms ease, background 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  transition:
+    width 180ms ease,
+    padding 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
 }
 
 .site-header.is-scrolled {
@@ -230,7 +271,9 @@ body[data-theme="dark"] .site-footer img {
   position: relative;
   padding: 10px 10px;
   border-radius: 999px;
-  transition: background 160ms ease, color 160ms ease;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
 }
 
 .site-nav a:hover,
@@ -256,7 +299,11 @@ body[data-theme="dark"] .site-footer img {
   font-weight: 820;
   line-height: 1;
   cursor: pointer;
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
 }
 
 .theme-toggle {
@@ -360,7 +407,12 @@ body[data-theme="dark"] .nav-cta {
   width: 54px;
   height: 10px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--cyan) 0 22%, transparent 22% 32%, var(--cyan) 32% 100%);
+  background: linear-gradient(
+    90deg,
+    var(--cyan) 0 22%,
+    transparent 22% 32%,
+    var(--cyan) 32% 100%
+  );
 }
 
 .hero-text {
@@ -427,8 +479,19 @@ body[data-theme="dark"] .nav-cta {
   height: 570px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 38% 34%, rgba(255, 255, 255, 0.72), transparent 0 14%, rgba(255, 255, 255, 0) 15%),
-    conic-gradient(from 120deg, rgba(53, 176, 213, 0.96), rgba(24, 168, 121, 0.64), rgba(53, 176, 213, 0.78), rgba(53, 176, 213, 0.96));
+    radial-gradient(
+      circle at 38% 34%,
+      rgba(255, 255, 255, 0.72),
+      transparent 0 14%,
+      rgba(255, 255, 255, 0) 15%
+    ),
+    conic-gradient(
+      from 120deg,
+      rgba(53, 176, 213, 0.96),
+      rgba(24, 168, 121, 0.64),
+      rgba(53, 176, 213, 0.78),
+      rgba(53, 176, 213, 0.96)
+    );
   opacity: 0.9;
   z-index: -1;
   filter: blur(0.1px);
@@ -459,8 +522,15 @@ body[data-theme="dark"] .live-console {
   background:
     linear-gradient(90deg, rgba(53, 176, 213, 0.05) 1px, transparent 1px),
     linear-gradient(rgba(53, 176, 213, 0.05) 1px, transparent 1px),
-    linear-gradient(180deg, color-mix(in srgb, var(--panel-strong) 88%, #e7f8fd), var(--paper));
-  background-size: 36px 36px, 36px 36px, auto;
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--panel-strong) 88%, #e7f8fd),
+      var(--paper)
+    );
+  background-size:
+    36px 36px,
+    36px 36px,
+    auto;
 }
 
 .console-brandbar,
@@ -616,7 +686,12 @@ body[data-theme="dark"] .live-console {
   height: 12px;
   border-radius: 999px;
   background:
-    linear-gradient(90deg, var(--cyan), rgba(31, 173, 135, 0.72) 68%, rgba(167, 204, 217, 0.34) 68%),
+    linear-gradient(
+      90deg,
+      var(--cyan),
+      rgba(31, 173, 135, 0.72) 68%,
+      rgba(167, 204, 217, 0.34) 68%
+    ),
     rgba(53, 176, 213, 0.08);
 }
 
@@ -806,8 +881,13 @@ meter {
   left: calc(16.666% + 38px);
   right: calc(16.666% + 38px);
   height: 2px;
-  background:
-    linear-gradient(90deg, color-mix(in srgb, var(--cyan) 20%, transparent), var(--cyan), var(--green), color-mix(in srgb, var(--green) 20%, transparent));
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--cyan) 20%, transparent),
+    var(--cyan),
+    var(--green),
+    color-mix(in srgb, var(--green) 20%, transparent)
+  );
   border-radius: 999px;
   opacity: 0.58;
   pointer-events: none;
@@ -842,7 +922,11 @@ meter {
   height: 116px;
   border-radius: 50%;
   transform: translateX(50%);
-  background: radial-gradient(circle, color-mix(in srgb, var(--cyan) 18%, transparent), transparent 66%);
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--cyan) 18%, transparent),
+    transparent 66%
+  );
   pointer-events: none;
 }
 
@@ -873,7 +957,11 @@ meter {
   border: 1px solid color-mix(in srgb, var(--cyan) 42%, var(--line));
   border-radius: 50%;
   background:
-    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.72), transparent 28%),
+    radial-gradient(
+      circle at 30% 22%,
+      rgba(255, 255, 255, 0.72),
+      transparent 28%
+    ),
     var(--cyan-soft);
   color: var(--cyan-dark);
   box-shadow:
@@ -884,14 +972,13 @@ meter {
 .definition-icon::after {
   content: "";
   position: absolute;
-  inset: -8px;
+  inset: -12px;
   z-index: -1;
-  border: 1px dashed color-mix(in srgb, var(--cyan) 36%, transparent);
+  border: 2px dashed color-mix(in srgb, var(--cyan) 60%, transparent);
   border-radius: 50%;
   background: transparent;
   animation: definitionOrbit 11s linear infinite;
 }
-
 .definition-icon svg {
   width: 34px;
   height: 34px;
@@ -1005,7 +1092,11 @@ meter {
   border: 1px solid var(--line);
   border-radius: 14px;
   background:
-    radial-gradient(circle at 100% 0%, rgba(53, 176, 213, 0.18), transparent 38%),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(53, 176, 213, 0.18),
+      transparent 38%
+    ),
     var(--panel);
   box-shadow: var(--soft-shadow);
 }
@@ -1047,7 +1138,10 @@ meter {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
 }
 
 .info-card {
@@ -1072,7 +1166,12 @@ meter {
   position: absolute;
   inset: 0 0 auto;
   height: 4px;
-  background: linear-gradient(90deg, var(--cyan), rgba(24, 168, 121, 0.52), transparent);
+  background: linear-gradient(
+    90deg,
+    var(--cyan),
+    rgba(24, 168, 121, 0.52),
+    transparent
+  );
 }
 
 .info-card::after,
@@ -1085,7 +1184,12 @@ meter {
   width: 148px;
   height: 148px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(53, 176, 213, 0.18), rgba(53, 176, 213, 0.03) 68%, transparent 69%);
+  background: radial-gradient(
+    circle,
+    rgba(53, 176, 213, 0.18),
+    rgba(53, 176, 213, 0.03) 68%,
+    transparent 69%
+  );
 }
 
 .info-card:hover,
@@ -1319,7 +1423,11 @@ figcaption,
 
 .zone-card.is-busy {
   border-color: rgba(232, 95, 95, 0.34);
-  background: linear-gradient(135deg, color-mix(in srgb, var(--panel-strong) 82%, transparent), rgba(232, 95, 95, 0.08));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--panel-strong) 82%, transparent),
+    rgba(232, 95, 95, 0.08)
+  );
 }
 
 .zone-card.is-busy::after {
@@ -1359,7 +1467,11 @@ figcaption,
   min-height: 100%;
   padding: 20px;
   background:
-    radial-gradient(circle at 100% 0%, rgba(53, 176, 213, 0.24), transparent 42%),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(53, 176, 213, 0.24),
+      transparent 42%
+    ),
     linear-gradient(180deg, #071015, #142833);
   color: #fff;
   box-shadow: 0 16px 40px rgba(6, 16, 20, 0.14);
@@ -1610,7 +1722,10 @@ textarea {
   color: var(--ink);
   outline: none;
   padding: 13px 14px;
-  transition: border 150ms ease, box-shadow 150ms ease, background 150ms ease;
+  transition:
+    border 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
 }
 
 textarea {
@@ -1667,7 +1782,9 @@ textarea:focus {
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 520ms ease, transform 520ms ease;
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
 }
 
 .reveal.is-visible {
@@ -2088,7 +2205,11 @@ textarea:focus {
   border: 1px solid var(--line);
   border-radius: 22px;
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--panel-strong) 88%, transparent), color-mix(in srgb, var(--cyan-soft) 28%, transparent)),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--panel-strong) 88%, transparent),
+      color-mix(in srgb, var(--cyan-soft) 28%, transparent)
+    ),
     var(--panel);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
@@ -2226,7 +2347,11 @@ textarea:focus {
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(232, 95, 95, 0.1), rgba(53, 176, 213, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(232, 95, 95, 0.1),
+    rgba(53, 176, 213, 0.08)
+  );
 }
 
 .loss-meter div {
@@ -2308,8 +2433,11 @@ textarea:focus {
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background:
-    linear-gradient(145deg, color-mix(in srgb, var(--panel-strong) 76%, transparent), color-mix(in srgb, var(--panel) 76%, transparent));
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--panel-strong) 76%, transparent),
+    color-mix(in srgb, var(--panel) 76%, transparent)
+  );
 }
 
 .ops-step:last-child {
@@ -2318,7 +2446,11 @@ textarea:focus {
 
 .ops-step.is-primary {
   background:
-    radial-gradient(circle at 70% 12%, rgba(53, 176, 213, 0.18), transparent 36%),
+    radial-gradient(
+      circle at 70% 12%,
+      rgba(53, 176, 213, 0.18),
+      transparent 36%
+    ),
     color-mix(in srgb, var(--cyan-soft) 34%, transparent);
 }
 
@@ -2456,7 +2588,11 @@ textarea:focus {
   padding: 18px;
   border: 1px solid rgba(53, 176, 213, 0.36);
   border-radius: 16px;
-  background: linear-gradient(90deg, rgba(53, 176, 213, 0.13), rgba(24, 168, 121, 0.08));
+  background: linear-gradient(
+    90deg,
+    rgba(53, 176, 213, 0.13),
+    rgba(24, 168, 121, 0.08)
+  );
 }
 
 .report-actions {
@@ -2566,7 +2702,11 @@ textarea:focus {
   border: 1px solid var(--line);
   border-radius: 22px;
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--panel-strong) 86%, transparent), color-mix(in srgb, var(--cyan-soft) 24%, transparent)),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--panel-strong) 86%, transparent),
+      color-mix(in srgb, var(--cyan-soft) 24%, transparent)
+    ),
     var(--panel);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
@@ -2655,7 +2795,11 @@ textarea:focus {
   border-radius: 24px;
   background:
     linear-gradient(180deg, rgba(53, 176, 213, 0.12), transparent),
-    repeating-linear-gradient(90deg, rgba(53, 176, 213, 0.08) 0 1px, transparent 1px 28px);
+    repeating-linear-gradient(
+      90deg,
+      rgba(53, 176, 213, 0.08) 0 1px,
+      transparent 1px 28px
+    );
   pointer-events: none;
 }
 
@@ -2748,8 +2892,11 @@ textarea:focus {
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--panel-strong) 82%, transparent), color-mix(in srgb, var(--cyan-soft) 14%, transparent));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--panel-strong) 82%, transparent),
+    color-mix(in srgb, var(--cyan-soft) 14%, transparent)
+  );
   box-shadow: var(--soft-shadow);
   backdrop-filter: blur(14px);
 }
@@ -2984,8 +3131,11 @@ textarea:focus {
 .mobile-device-panel {
   border: 1px solid var(--line);
   border-radius: 18px;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--panel-strong) 84%, transparent), color-mix(in srgb, var(--cyan-soft) 18%, transparent));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--panel-strong) 84%, transparent),
+    color-mix(in srgb, var(--cyan-soft) 18%, transparent)
+  );
   box-shadow: var(--soft-shadow);
   backdrop-filter: blur(16px);
 }
@@ -3035,8 +3185,11 @@ textarea:focus {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 28px;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--panel-strong) 88%, transparent), color-mix(in srgb, var(--cyan-soft) 24%, transparent));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--panel-strong) 88%, transparent),
+    color-mix(in srgb, var(--cyan-soft) 24%, transparent)
+  );
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
@@ -3163,8 +3316,7 @@ textarea:focus {
 .pos-device-cutout img {
   width: 100%;
   display: block;
-  filter:
-    drop-shadow(0 34px 34px rgba(7, 16, 21, 0.22))
+  filter: drop-shadow(0 34px 34px rgba(7, 16, 21, 0.22))
     drop-shadow(0 0 44px rgba(53, 176, 213, 0.12));
 }
 
@@ -3481,8 +3633,11 @@ body[data-theme="dark"] .dashboard-visual {
   padding: 18px;
   overflow: hidden;
   border-radius: 18px;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--panel-strong) 82%, transparent), color-mix(in srgb, var(--cyan-soft) 18%, transparent));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--panel-strong) 82%, transparent),
+    color-mix(in srgb, var(--cyan-soft) 18%, transparent)
+  );
   box-shadow: var(--soft-shadow);
 }
 
@@ -3770,11 +3925,18 @@ body[data-theme="light"] .hero-highlight {
   min-height: 530px;
   padding: 20px;
   background:
-    radial-gradient(circle at 86% 0%, rgba(53, 176, 213, 0.15), transparent 30%),
+    radial-gradient(
+      circle at 86% 0%,
+      rgba(53, 176, 213, 0.15),
+      transparent 30%
+    ),
     linear-gradient(90deg, rgba(53, 176, 213, 0.04) 1px, transparent 1px),
-    linear-gradient(rgba(53, 176, 213, 0.04) 1px, transparent 1px),
-    transparent;
-  background-size: auto, 38px 38px, 38px 38px, auto;
+    linear-gradient(rgba(53, 176, 213, 0.04) 1px, transparent 1px), transparent;
+  background-size:
+    auto,
+    38px 38px,
+    38px 38px,
+    auto;
 }
 
 .console-brandbar {
@@ -3827,7 +3989,11 @@ body[data-theme="light"] .hero-highlight {
   padding: 18px 18px 42px;
   border-radius: 18px;
   background:
-    radial-gradient(circle at 100% 0%, rgba(53, 176, 213, 0.12), transparent 42%),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(53, 176, 213, 0.12),
+      transparent 42%
+    ),
     color-mix(in srgb, var(--panel-strong) 70%, transparent);
 }
 
@@ -3859,7 +4025,11 @@ body[data-theme="light"] .hero-highlight {
   margin-top: 12px;
   min-height: 46px;
   border-radius: 16px;
-  background: linear-gradient(90deg, rgba(53, 176, 213, 0.14), rgba(24, 168, 121, 0.08));
+  background: linear-gradient(
+    90deg,
+    rgba(53, 176, 213, 0.14),
+    rgba(24, 168, 121, 0.08)
+  );
 }
 
 @media (max-width: 1080px) {
@@ -3968,9 +4138,18 @@ body[data-theme="dark"] .hero-visual .live-console {
   border-radius: 34px;
   border: 1px solid color-mix(in srgb, var(--cyan) 22%, transparent);
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--cyan) 12%, transparent), transparent 44%),
-    linear-gradient(90deg, color-mix(in srgb, var(--panel-strong) 58%, transparent), color-mix(in srgb, var(--cyan-soft) 20%, transparent));
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--panel-strong) 34%, transparent);
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--cyan) 12%, transparent),
+      transparent 44%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--panel-strong) 58%, transparent),
+      color-mix(in srgb, var(--cyan-soft) 20%, transparent)
+    );
+  box-shadow: inset 0 0 0 1px
+    color-mix(in srgb, var(--panel-strong) 34%, transparent);
   transform: skewY(-3deg) rotate(-1deg);
 }
 
@@ -3983,10 +4162,28 @@ body[data-theme="dark"] .hero-visual .live-console {
   height: 500px;
   border-radius: 34px;
   background:
-    conic-gradient(from 224deg at 78% 30%, color-mix(in srgb, var(--green) 18%, transparent), transparent 24%, color-mix(in srgb, var(--cyan) 16%, transparent) 42%, transparent 64%),
-    radial-gradient(ellipse at 62% 28%, color-mix(in srgb, var(--cyan) 18%, transparent), transparent 58%),
-    radial-gradient(ellipse at 30% 74%, color-mix(in srgb, var(--green) 14%, transparent), transparent 56%),
-    linear-gradient(180deg, color-mix(in srgb, var(--panel-strong) 20%, transparent), transparent 72%);
+    conic-gradient(
+      from 224deg at 78% 30%,
+      color-mix(in srgb, var(--green) 18%, transparent),
+      transparent 24%,
+      color-mix(in srgb, var(--cyan) 16%, transparent) 42%,
+      transparent 64%
+    ),
+    radial-gradient(
+      ellipse at 62% 28%,
+      color-mix(in srgb, var(--cyan) 18%, transparent),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse at 30% 74%,
+      color-mix(in srgb, var(--green) 14%, transparent),
+      transparent 56%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--panel-strong) 20%, transparent),
+      transparent 72%
+    );
   opacity: 0.82;
   transform: rotate(-1deg) scale(1.02);
   filter: saturate(1.12);
