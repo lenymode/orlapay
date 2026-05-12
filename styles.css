@@ -179,7 +179,7 @@ p {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 24px;
+  gap: 18px;
   width: min(var(--container), calc(100% - 32px));
   min-height: 78px;
   margin: 0 auto;
@@ -220,15 +220,15 @@ body[data-theme="dark"] .site-footer img {
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 760;
 }
 
 .site-nav a {
   position: relative;
-  padding: 10px 14px;
+  padding: 10px 10px;
   border-radius: 999px;
   transition: background 160ms ease, color 160ms ease;
 }
@@ -287,10 +287,10 @@ body[data-theme="dark"] .moon-icon {
 }
 
 .nav-cta {
-  padding: 0 20px;
+  padding: 0 16px;
   background: var(--ink);
   color: var(--paper);
-  font-size: 14px;
+  font-size: 13px;
   box-shadow: 0 14px 34px rgba(6, 16, 20, 0.14);
 }
 

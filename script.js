@@ -6,6 +6,16 @@ const revealItems = [...document.querySelectorAll(".reveal")];
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const storedTheme = localStorage.getItem("orlay-theme");
 const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+const shouldStartAtTop = !window.location.hash;
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+const resetInitialScroll = () => {
+  if (!shouldStartAtTop) return;
+  window.scrollTo(0, 0);
+};
 
 const setTheme = (theme) => {
   document.body.dataset.theme = theme;
@@ -38,8 +48,19 @@ const setActiveNav = () => {
   });
 };
 
+resetInitialScroll();
 setHeaderState();
 setActiveNav();
+
+window.addEventListener("load", () => {
+  resetInitialScroll();
+  setHeaderState();
+});
+
+window.addEventListener("pageshow", () => {
+  resetInitialScroll();
+  setHeaderState();
+});
 
 window.addEventListener("scroll", () => {
   setHeaderState();
