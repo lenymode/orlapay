@@ -14,7 +14,7 @@ const setTheme = (theme) => {
 
   const isDark = theme === "dark";
   themeToggle.setAttribute("aria-pressed", String(isDark));
-  themeToggle.setAttribute("aria-label", isDark ? "Passa alla modalità chiara" : "Passa alla modalità scura");
+  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
 };
 
 setTheme(storedTheme || preferredTheme);
@@ -78,7 +78,7 @@ if (form && message) {
       return;
     }
 
-    message.textContent = "Grazie. La richiesta demo è pronta per essere collegata al sistema di contatto.";
+    message.textContent = "Thank you. We will review your event flow and contact you to schedule a demo focused on your venue, audience and service points.";
     message.classList.add("is-visible");
     form.reset();
   });
