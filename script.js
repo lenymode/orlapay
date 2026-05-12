@@ -4,9 +4,11 @@ const message = document.querySelector("[data-form-message]");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const revealItems = [...document.querySelectorAll(".reveal")];
 const themeToggle = document.querySelector("[data-theme-toggle]");
+const brandLink = document.querySelector(".brand[href='#top']");
 const storedTheme = localStorage.getItem("orlay-theme");
 const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 const shouldStartAtTop = !window.location.hash;
+let isReturningToTop = false;
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -31,6 +33,11 @@ setTheme(storedTheme || preferredTheme);
 
 const setHeaderState = () => {
   if (!header) return;
+  if (isReturningToTop) {
+    header.classList.remove("is-scrolled");
+    if (window.scrollY <= 12) isReturningToTop = false;
+    return;
+  }
   header.classList.toggle("is-scrolled", window.scrollY > 12);
 };
 
@@ -66,6 +73,19 @@ window.addEventListener("scroll", () => {
   setHeaderState();
   setActiveNav();
 }, { passive: true });
+
+if (brandLink) {
+  brandLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    isReturningToTop = true;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    header?.classList.remove("is-scrolled");
+
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  });
+}
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
