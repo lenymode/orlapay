@@ -1246,6 +1246,8 @@ meter {
   stroke-width: 2.4;
   stroke-linecap: square;
   stroke-linejoin: miter;
+  stroke-dasharray: 310;
+  stroke-dashoffset: 310;
 }
 
 .pulse-drop {
@@ -1253,6 +1255,26 @@ meter {
   stroke-width: 3.2;
   stroke-linecap: square;
   stroke-linejoin: miter;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+}
+
+.problem-section.is-animated .pressure-copy strong {
+  animation: revenueDropPop 640ms cubic-bezier(0.2, 0.9, 0.24, 1.22) 180ms both;
+}
+
+.problem-section.is-animated .pressure-time {
+  animation: timeTick 520ms ease 520ms both;
+}
+
+.problem-section.is-animated .pulse-line {
+  animation: drawPulseLine 900ms ease-out 260ms forwards;
+}
+
+.problem-section.is-animated .pulse-drop {
+  animation:
+    drawPulseLine 540ms ease-out 960ms forwards,
+    warningPulse 1500ms ease-in-out 1500ms 2;
 }
 
 .info-card,
@@ -1941,6 +1963,81 @@ textarea:focus {
   }
 }
 
+@keyframes drawPulseLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes revenueDropPop {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes timeTick {
+  0% {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes warningPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(244, 51, 61, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 8px rgba(244, 51, 61, 0.38));
+  }
+}
+
+@keyframes bottleneckRowIn {
+  0% {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes issueMetricPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes riskMeterFill {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
 @keyframes definitionFloat {
   0%,
   100% {
@@ -2466,6 +2563,46 @@ textarea:focus {
   background: transparent;
 }
 
+.problem-section.is-animated .flow-lane {
+  animation: bottleneckRowIn 560ms ease both;
+}
+
+.problem-section.is-animated .flow-lane:nth-child(1) {
+  animation-delay: 180ms;
+}
+
+.problem-section.is-animated .flow-lane:nth-child(2) {
+  animation-delay: 300ms;
+}
+
+.problem-section.is-animated .flow-lane:nth-child(3) {
+  animation-delay: 420ms;
+}
+
+.problem-section.is-animated .flow-lane:nth-child(4) {
+  animation-delay: 540ms;
+}
+
+.problem-section.is-animated .flow-lane b {
+  animation: issueMetricPop 560ms cubic-bezier(0.2, 0.9, 0.24, 1.22) both;
+}
+
+.problem-section.is-animated .flow-lane:nth-child(1) b {
+  animation-delay: 420ms;
+}
+
+.problem-section.is-animated .flow-lane:nth-child(2) b {
+  animation-delay: 540ms;
+}
+
+.problem-section.is-animated .flow-lane:nth-child(3) b {
+  animation-delay: 660ms;
+}
+
+.problem-section.is-animated .flow-lane:nth-child(4) b {
+  animation-delay: 780ms;
+}
+
 .flow-lane::before {
   content: "";
   position: absolute;
@@ -2575,6 +2712,15 @@ textarea:focus {
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, var(--red), var(--amber));
+  transform-origin: left center;
+}
+
+.problem-section.is-animated .loss-meter i span {
+  animation: riskMeterFill 900ms ease-out 720ms both;
+}
+
+.problem-section.is-animated .loss-meter strong {
+  animation: issueMetricPop 560ms cubic-bezier(0.2, 0.9, 0.24, 1.22) 820ms both;
 }
 
 .report-grid i span {
