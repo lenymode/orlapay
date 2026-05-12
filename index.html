@@ -190,64 +190,87 @@
 
     <section class="section-shell problem-section" id="problema">
       <div class="problem-copy reveal">
-        <p class="eyebrow">The bottleneck</p>
-        <h2>Peak demand is where revenue disappears.</h2>
-        <p>When fans have to choose, pay, wait and ask where to collect, the queue becomes a sales leak.</p>
+        <div class="problem-label-row">
+          <p class="eyebrow">Il collo di bottiglia</p>
+          <span class="demo-data-badge">Dati demo</span>
+        </div>
+        <h2>Nei picchi di domanda il ricavo sparisce.</h2>
+        <p>Quando i fan devono scegliere, pagare, aspettare e chiedere dove ritirare, la coda diventa una perdita di vendite.</p>
         <div class="pressure-panel" aria-label="Scenario operativo durante un picco evento">
-          <span>Peak time</span>
-          <strong>21:35</strong>
-          <p>High demand, saturated staff and fragmented data.</p>
+          <div class="pressure-copy">
+            <span>Picco live</span>
+            <strong>-32%</strong>
+            <div class="pressure-time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+              <span>21:35</span>
+            </div>
+          </div>
+          <div class="sales-drop-visual" aria-label="Dati demo: andamento vendite in calo durante il picco">
+            <div class="sales-drop-head">
+              <span>Trend vendite</span>
+              <strong>Dati demo</strong>
+            </div>
+            <svg class="sales-pulse-chart" viewBox="0 0 260 96" aria-hidden="true">
+              <path class="pulse-grid" d="M0 18H260M0 48H260M0 78H260"></path>
+              <path class="pulse-line" d="M0 26H34L43 20L58 30H88L101 28L113 42H139L151 39L168 58H195L209 70H236L260 70"></path>
+              <path class="pulse-drop" d="M168 58H195L209 70H236L260 70"></path>
+            </svg>
+            <div class="sales-drop-foot">
+              <span>Prima della coda</span>
+              <span>Coda al picco</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="bottleneck-board reveal" aria-label="Monitor criticità evento">
         <div class="board-topline">
           <div>
             <span class="status-dot"></span>
-            <strong>Live pressure monitor</strong>
+            <strong>Monitor pressione live</strong>
           </div>
-          <span>4 issues</span>
+          <span>Dati demo · 4 criticità</span>
         </div>
         <div class="flow-lanes">
           <article class="flow-lane is-hot">
             <span class="lane-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18h16M7 14h10M9 10h6M12 3v3M5 7h14"></path></svg></span>
             <div>
-              <strong>Sales are lost before checkout</strong>
-              <p>Fans leave the line, buy less, or postpone the purchase when the wait feels uncertain.</p>
+              <strong>Le vendite si perdono prima del checkout</strong>
+              <p>I fan lasciano la fila, comprano meno o rimandano l'acquisto quando l'attesa sembra incerta.</p>
             </div>
             <b>2x</b>
           </article>
           <article class="flow-lane">
             <span class="lane-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M4 13a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v5h5"></path></svg></span>
             <div>
-              <strong>Staff stop serving and start fixing problems</strong>
-              <p>Operators waste time reconstructing orders, checking payments and explaining pickup instructions.</p>
+              <strong>Lo staff smette di servire e inizia a risolvere problemi</strong>
+              <p>Gli operatori perdono tempo a ricostruire ordini, verificare pagamenti e spiegare il ritiro.</p>
             </div>
             <b>+38%</b>
           </article>
           <article class="flow-lane">
             <span class="lane-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"></path><path d="M3 19h18"></path></svg></span>
             <div>
-              <strong>Managers see the issue too late</strong>
-              <p>Revenue, queues, pickup status and zone performance are often split across separate tools.</p>
+              <strong>I manager vedono il problema troppo tardi</strong>
+              <p>Ricavi, code, stato dei ritiri e performance di zona sono spesso divisi tra strumenti diversi.</p>
             </div>
             <b>T+1</b>
           </article>
           <article class="flow-lane">
             <span class="lane-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path><path d="M16 7h3v3"></path></svg></span>
             <div>
-              <strong>The next event starts from guesses</strong>
-              <p>Without clear data, staffing, pricing and layout decisions are based on perception instead of evidence.</p>
+              <strong>L'evento successivo parte da ipotesi</strong>
+              <p>Senza dati chiari, staffing, pricing e layout si decidono sulla percezione invece che sulle evidenze.</p>
             </div>
-            <b>Next</b>
+            <b>Dopo</b>
           </article>
         </div>
         <div class="loss-meter" aria-label="Domanda persa stimata">
           <div>
-            <span>Demand served</span>
-            <strong>68%</strong>
+            <span>Dati demo · Ricavo a rischio</span>
+            <strong>32%</strong>
           </div>
           <i aria-hidden="true"><span></span></i>
-          <small>Unserved demand turns into abandonment, waiting or smaller basket size.</small>
+          <small>La domanda non servita diventa rinuncia, attesa o scontrino più basso.</small>
         </div>
       </div>
     </section>
