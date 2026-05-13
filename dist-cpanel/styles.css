@@ -1469,6 +1469,56 @@ textarea:focus {
   }
 }
 
+@keyframes analyticsAura {
+  from {
+    opacity: 0.68;
+    transform: translate3d(0, 0, 0) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-16px, 14px, 0) scale(1.08);
+  }
+}
+
+@keyframes analyticsCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes analyticsActionIn {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+    box-shadow: 0 0 0 rgba(53, 176, 213, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 18px 38px rgba(53, 176, 213, 0.16);
+  }
+}
+
+@keyframes analyticsLineDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes analyticsMeterFill {
+  to {
+    transform: scaleX(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1485,6 +1535,22 @@ textarea:focus {
 
   .reveal {
     opacity: 1;
+    transform: none;
+  }
+
+  .report-console .report-head,
+  .report-console .report-hero,
+  .report-console .report-grid article,
+  .report-console .report-actions {
+    opacity: 1;
+    transform: none;
+  }
+
+  .report-hero svg path {
+    stroke-dashoffset: 0;
+  }
+
+  .report-grid i span {
     transform: none;
   }
 }
@@ -1820,6 +1886,10 @@ textarea:focus {
   pointer-events: none;
 }
 
+.report-console.is-visible::before {
+  animation: analyticsAura 5.8s ease-in-out infinite alternate;
+}
+
 .board-topline,
 .report-head,
 .report-actions {
@@ -1974,6 +2044,31 @@ textarea:focus {
   background: linear-gradient(90deg, var(--cyan), var(--green));
 }
 
+.report-grid i span {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.report-console.is-visible .report-grid i span {
+  animation: analyticsMeterFill 760ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.report-console.is-visible .report-grid article:nth-child(1) i span {
+  animation-delay: 680ms;
+}
+
+.report-console.is-visible .report-grid article:nth-child(2) i span {
+  animation-delay: 780ms;
+}
+
+.report-console.is-visible .report-grid article:nth-child(3) i span {
+  animation-delay: 880ms;
+}
+
+.report-console.is-visible .report-grid article:nth-child(4) i span {
+  animation-delay: 980ms;
+}
+
 .solution-section {
   display: block;
 }
@@ -2117,7 +2212,15 @@ textarea:focus {
   font-size: 15px;
 }
 
-.report-hero svg {
+.report-hero small,
+.report-grid small {
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 680;
+  line-height: 1.45;
+}
+
+.report-hero > svg {
   width: 100%;
   min-height: 130px;
   fill: none;
@@ -2127,28 +2230,120 @@ textarea:focus {
   filter: drop-shadow(0 14px 18px rgba(53, 176, 213, 0.22));
 }
 
+.report-hero > svg path {
+  stroke-dasharray: 410;
+  stroke-dashoffset: 410;
+}
+
+.report-console.is-visible .report-hero > svg path {
+  animation: analyticsLineDraw 1s cubic-bezier(0.2, 0.8, 0.2, 1) 520ms both;
+}
+
+.report-kicker,
+.report-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.report-module-icon {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(53, 176, 213, 0.24);
+  border-radius: 12px;
+  background: rgba(53, 176, 213, 0.12);
+  color: var(--cyan-dark);
+}
+
+.report-module-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.report-kicker .report-module-icon,
+.report-card-top .report-module-icon {
+  color: var(--cyan-dark);
+}
+
 .report-grid {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 12px;
 }
 
 .report-grid article {
   display: grid;
-  gap: 12px;
-  min-height: 136px;
+  gap: 10px;
+  min-height: 214px;
+  align-content: start;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: color-mix(in srgb, var(--panel-strong) 72%, transparent);
 }
 
+.report-console .report-head,
+.report-console .report-hero,
+.report-console .report-grid article,
+.report-console .report-actions {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.report-console.is-visible .report-head {
+  animation: analyticsCardIn 560ms ease-out 120ms both;
+}
+
+.report-console.is-visible .report-hero {
+  animation: analyticsCardIn 620ms ease-out 220ms both;
+}
+
+.report-console.is-visible .report-grid article {
+  animation: analyticsCardIn 560ms ease-out both;
+}
+
+.report-console.is-visible .report-grid article:nth-child(1) {
+  animation-delay: 360ms;
+}
+
+.report-console.is-visible .report-grid article:nth-child(2) {
+  animation-delay: 460ms;
+}
+
+.report-console.is-visible .report-grid article:nth-child(3) {
+  animation-delay: 560ms;
+}
+
+.report-console.is-visible .report-grid article:nth-child(4) {
+  animation-delay: 660ms;
+}
+
 .report-grid strong {
   font-size: 28px;
   line-height: 1;
+}
+
+.report-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.report-grid i {
+  align-self: end;
+  margin-top: auto;
 }
 
 .report-grid article:nth-child(2) i span {
@@ -2157,6 +2352,10 @@ textarea:focus {
 
 .report-grid article:nth-child(3) i span {
   width: 74%;
+}
+
+.report-grid article:nth-child(4) i span {
+  width: 86%;
 }
 
 .report-actions {
@@ -2175,6 +2374,17 @@ textarea:focus {
 .report-actions strong {
   font-size: 17px;
   line-height: 1.45;
+}
+
+.report-actions p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.report-console.is-visible .report-actions {
+  animation: analyticsActionIn 640ms ease-out 720ms both;
 }
 
 @media (max-width: 1080px) {
@@ -2203,6 +2413,10 @@ textarea:focus {
   .report-grid,
   .ops-flow {
     grid-template-columns: 1fr;
+  }
+
+  .report-grid article {
+    min-height: auto;
   }
 
   .flow-lane {
