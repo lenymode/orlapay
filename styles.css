@@ -1206,7 +1206,7 @@ meter {
 }
 
 .pressure-panel span,
-.wayfinding-head span,
+.wayfinding-head div > span,
 .zone-type,
 .wayfinding-action span,
 .route-step span,
@@ -1659,7 +1659,7 @@ figcaption,
 
 .map-section {
   display: grid;
-  grid-template-columns: minmax(560px, 1.08fr) minmax(0, 0.92fr);
+  grid-template-columns: minmax(620px, 1.14fr) minmax(0, 0.86fr);
   gap: 56px;
   align-items: center;
   padding-top: 84px;
@@ -1676,10 +1676,10 @@ figcaption,
   grid-row: 1;
   position: relative;
   display: grid;
-  gap: 20px;
+  gap: 18px;
   max-width: none;
   overflow: hidden;
-  padding: 24px;
+  padding: clamp(18px, 2.2vw, 26px);
   border-radius: 18px;
 }
 
@@ -1722,12 +1722,13 @@ figcaption,
 }
 
 .wayfinding-body {
-  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.42fr);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
   align-items: stretch;
 }
 
 .zone-list {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: stretch;
 }
 
 .zone-card,
@@ -1745,11 +1746,12 @@ figcaption,
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
     "type value"
-    "note value";
-  column-gap: 16px;
-  align-items: center;
-  min-height: 82px;
-  padding: 16px 18px;
+    "note note";
+  column-gap: 14px;
+  row-gap: 12px;
+  align-items: start;
+  min-height: 172px;
+  padding: 18px;
   overflow: hidden;
   box-shadow: 0 12px 32px rgba(6, 16, 20, 0.04);
 }
@@ -1760,9 +1762,22 @@ figcaption,
   left: 18px;
   right: 18px;
   bottom: 0;
-  height: 3px;
+  height: 4px;
   border-radius: 999px 999px 0 0;
   background: linear-gradient(90deg, var(--cyan), rgba(53, 176, 213, 0.15));
+}
+
+.zone-card::before {
+  content: "";
+  grid-area: value;
+  align-self: center;
+  justify-self: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, var(--panel-strong) 0 46%, transparent 47%),
+    conic-gradient(var(--cyan) 0 68%, color-mix(in srgb, var(--line) 72%, transparent) 68% 100%);
 }
 
 .zone-card.is-busy {
@@ -1778,11 +1793,26 @@ figcaption,
   background: linear-gradient(90deg, var(--red), rgba(244, 51, 61, 0.15));
 }
 
+.zone-card.is-busy::before {
+  background:
+    radial-gradient(circle at 50% 50%, var(--panel-strong) 0 46%, transparent 47%),
+    conic-gradient(var(--red) 0 92%, color-mix(in srgb, var(--line) 72%, transparent) 92% 100%);
+}
+
 .zone-card strong {
   grid-area: value;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 44px;
+  height: 44px;
   color: var(--ink);
-  font-size: 28px;
+  font-size: 13px;
+  font-weight: 820;
   line-height: 1;
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -1797,11 +1827,15 @@ figcaption,
 
 .zone-type {
   grid-area: type;
-  color: var(--muted);
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 780;
+  line-height: 1.22;
 }
 
 .zone-card p {
   grid-area: note;
+  max-width: 36ch;
 }
 
 .wayfinding-action {
@@ -1829,7 +1863,7 @@ figcaption,
   display: block;
   margin: 14px 0 10px;
   color: #fff;
-  font-size: 24px;
+  font-size: clamp(22px, 2.2vw, 30px);
   line-height: 1.08;
 }
 
@@ -1846,9 +1880,9 @@ figcaption,
 .route-board::before {
   content: "";
   position: absolute;
-  left: 13%;
-  right: 13%;
-  top: 28px;
+  left: 33px;
+  right: calc((100% - 32px) / 3 - 33px);
+  top: 33px;
   height: 2px;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--cyan), rgba(53, 176, 213, 0.16));
@@ -1857,7 +1891,7 @@ figcaption,
 .route-step {
   position: relative;
   z-index: 1;
-  min-height: 118px;
+  min-height: 132px;
   padding: 14px 16px 16px;
 }
 
@@ -2445,7 +2479,6 @@ textarea:focus {
     text-align: left;
   }
 
-  .zone-list,
   .wayfinding-body,
   .route-board,
   .update-grid {
@@ -2581,17 +2614,20 @@ textarea:focus {
   }
 
   .zone-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
-      "type"
-      "value"
-      "note";
-    gap: 7px;
+      "type value"
+      "note note";
+    gap: 10px 12px;
     min-height: auto;
   }
 
+  .zone-list {
+    grid-template-columns: 1fr;
+  }
+
   .zone-card strong {
-    font-size: 26px;
+    font-size: 13px;
   }
 
   .wayfinding-action {
