@@ -70,16 +70,71 @@ if ("IntersectionObserver" in window) {
 }
 
 if (form && message) {
+  const requiredFields = [...form.querySelectorAll("input[required], textarea[required]")];
+
+  const ensureFieldError = (field) => {
+    const row = field.closest(".form-row");
+    if (!row) return null;
+
+    let error = row.querySelector(".field-error");
+    if (!error) {
+      error = document.createElement("small");
+      error.className = "field-error";
+      error.id = `${field.id || field.name}-error`;
+      row.append(error);
+    }
+
+    field.setAttribute("aria-describedby", error.id);
+    return error;
+  };
+
+  const getFieldError = (field) => {
+    if (!field.value.trim()) return "Questo campo è obbligatorio.";
+    if (field.type === "email" && field.validity.typeMismatch) return "Inserisci un indirizzo email valido.";
+    return "";
+  };
+
+  const setFieldError = (field, errorText) => {
+    const row = field.closest(".form-row");
+    const error = ensureFieldError(field);
+    if (!row || !error) return;
+
+    row.classList.toggle("has-error", Boolean(errorText));
+    field.setAttribute("aria-invalid", String(Boolean(errorText)));
+    error.textContent = errorText;
+  };
+
+  const validateField = (field) => {
+    const errorText = getFieldError(field);
+    setFieldError(field, errorText);
+    return !errorText;
+  };
+
+  requiredFields.forEach((field) => {
+    ensureFieldError(field);
+    field.addEventListener("input", () => {
+      if (field.getAttribute("aria-invalid") === "true") validateField(field);
+    });
+    field.addEventListener("blur", () => validateField(field));
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    message.classList.remove("is-visible");
 
-    if (!form.checkValidity()) {
-      form.reportValidity();
+    let firstInvalidField = null;
+    requiredFields.forEach((field) => {
+      if (!validateField(field) && !firstInvalidField) firstInvalidField = field;
+    });
+
+    if (firstInvalidField) {
+      firstInvalidField.focus();
       return;
     }
 
-    message.textContent = "Grazie. La richiesta demo è pronta per essere collegata al sistema di contatto.";
+    message.textContent = "Grazie. Analizzeremo i flussi del tuo evento e ti contatteremo per fissare una demo focalizzata su venue, pubblico e punti di servizio.";
     message.classList.add("is-visible");
     form.reset();
+    requiredFields.forEach((field) => setFieldError(field, ""));
   });
 }

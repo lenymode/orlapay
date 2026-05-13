@@ -32,7 +32,7 @@
         <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.36-6.36 1.42-1.42M4.22 19.78l1.42-1.42m12.72 0 1.42 1.42M4.22 4.22l1.42 1.42"></path><circle cx="12" cy="12" r="4"></circle></svg>
         <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 14.4A8.7 8.7 0 0 1 9.6 3.2a8.8 8.8 0 1 0 11.2 11.2Z"></path></svg>
       </button>
-      <a class="nav-cta" href="#demo">Prenota una demo</a>
+      <a class="nav-cta" href="#demo">Revisione flussi</a>
     </div>
   </header>
 
@@ -43,7 +43,7 @@
         <h1>Mantieni le vendite fluide quando code, pagamenti e ritiri raggiungono il picco.</h1>
         <p class="hero-text">Orlay Pay collega una web app QR per i fan, uno schermo di servizio per lo staff e una regia di controllo per l’organizzatore. I fan ordinano e pagano dal telefono o completano al bar, lo staff serve più velocemente ordini già preparati e il team vede domanda, ricavi e congestione dei ritiri per zona in tempo reale.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#demo">Prenota una demo</a>
+          <a class="button primary" href="#demo">Prenota la revisione</a>
           <a class="button secondary" href="#soluzione">Scopri come funziona</a>
         </div>
         <div class="trust-strip" aria-label="Funzionalità principali Orlay Pay">
@@ -760,24 +760,43 @@
 
     <section class="section-shell final-section" id="demo">
       <div class="final-copy reveal">
-        <p class="eyebrow">Demo Orlay Pay</p>
-        <h2>Vuoi capire dove il tuo evento sta perdendo vendite?</h2>
-        <p>Prenota una demo: analizziamo insieme flussi, punti bar, aree critiche e opportunità di ricavo.</p>
-        <a class="button primary" href="#demo-form">Richiedi una demo</a>
+        <p class="eyebrow">Revisione flussi evento</p>
+        <h2>Prenota una revisione di 30 minuti dei flussi del tuo evento.</h2>
+        <p>Mappiamo dimensione del pubblico, finestre di picco, bar, punti di ritiro, aree VIP, flussi merchandising e sistema attuale di ordini e pagamenti, poi ti mostriamo come Orlay Pay potrebbe funzionare nel tuo evento.</p>
       </div>
 
-      <form class="demo-form reveal" id="demo-form" data-demo-form>
+      <form class="demo-form reveal" id="demo-form" data-demo-form novalidate>
         <div class="form-row">
-          <label for="name">Nome</label>
+          <label for="name">Full Name</label>
           <input id="name" name="name" type="text" autocomplete="name" required>
         </div>
         <div class="form-row">
-          <label for="company">Azienda / venue</label>
+          <label for="company">Company / Venue</label>
           <input id="company" name="company" type="text" autocomplete="organization" required>
+        </div>
+        <div class="form-row">
+          <label for="role">Ruolo</label>
+          <input id="role" name="role" type="text" autocomplete="organization-title" required>
         </div>
         <div class="form-row">
           <label for="event-type">Tipo di evento</label>
           <input id="event-type" name="event-type" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="attendance">Affluenza prevista</label>
+          <input id="attendance" name="attendance" type="text" inputmode="numeric" required>
+        </div>
+        <div class="form-row">
+          <label for="service-points">Numero di punti di servizio</label>
+          <input id="service-points" name="service-points" type="text" inputmode="numeric" required>
+        </div>
+        <div class="form-row">
+          <label for="event-date">Data o stagione dell'evento</label>
+          <input id="event-date" name="event-date" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="current-setup">Sistema attuale di ordini / pagamenti</label>
+          <input id="current-setup" name="current-setup" type="text" required>
         </div>
         <div class="form-row">
           <label for="email">Email</label>
@@ -788,19 +807,54 @@
           <input id="phone" name="phone" type="tel" autocomplete="tel" required>
         </div>
         <div class="form-row full">
-          <label for="message">Messaggio opzionale</label>
-          <textarea id="message" name="message" rows="4"></textarea>
+          <label for="message">Cosa vuoi migliorare?</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
         </div>
-        <button class="button primary full" type="submit">Richiedi una demo</button>
-        <p class="privacy">Ti ricontattiamo solo per valutare il progetto Orlay Pay più adatto al tuo evento.</p>
+        <button class="button primary full form-submit" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+          <span>Prenota la revisione dei flussi</span>
+        </button>
+        <p class="privacy">Ti contattiamo solo per preparare una demo Orlay Pay sul tuo evento. Niente spam commerciale generico.</p>
         <p class="form-message" data-form-message role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <img src="assets/orlay-logo.png" alt="Orlay Pay" width="118" height="31">
-    <span>Continuità di vendita per eventi live ad alta affluenza.</span>
+  <footer class="site-footer" aria-label="Footer Orlay Pay">
+    <div class="footer-brand">
+      <img src="assets/orlay-logo.png" alt="Orlay Pay" width="118" height="31">
+      <p>Orlay Pay — ordini live, pagamenti e controllo dei ritiri per eventi ad alta affluenza.</p>
+      <a class="footer-contact" href="mailto:hello@orlaypay.com">hello@orlaypay.com</a>
+    </div>
+    <nav class="footer-links" aria-label="Link footer">
+      <div>
+        <h2>Prodotto</h2>
+        <a href="#soluzione">Come funziona</a>
+        <a href="#controllo">Controllo organizer</a>
+        <a href="#esperienza">Web app fan</a>
+        <a href="#staff">Flusso staff</a>
+        <a href="#analytics">Analytics evento</a>
+      </div>
+      <div>
+        <h2>Casi d'uso</h2>
+        <a href="#target">Festival</a>
+        <a href="#target">Stadi e arene</a>
+        <a href="#target">Hospitality e VIP</a>
+        <a href="#target">Food court</a>
+        <a href="#target">Merchandising</a>
+      </div>
+      <div>
+        <h2>Azienda</h2>
+        <a href="mailto:hello@orlaypay.com">Contatto</a>
+        <a href="#demo">Prenota una demo</a>
+        <span>Privacy policy</span>
+        <span>Termini</span>
+        <span>Sicurezza</span>
+      </div>
+    </nav>
   </footer>
 
   <script src="script.js"></script>
