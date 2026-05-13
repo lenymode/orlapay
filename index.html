@@ -366,8 +366,19 @@
     <section class="section-shell phone-experience" id="esperienza">
       <div class="phone-copy reveal">
         <p class="eyebrow">Fan app</p>
-        <h2>Il telefono diventa il punto vendita più veloce dell’evento.</h2>
-        <p>Menu, ordine, pagamento e ritiro restano nello stesso flusso. Il fan sceglie dal posto, evita la doppia attesa e riceve indicazioni chiare sul punto di pickup.</p>
+        <h2>Una web app QR che trasforma ogni telefono in un canale di vendita.</h2>
+        <p>I fan aprono Orlay Pay da un QR code, senza scaricare nulla dagli store. Vedono il menu dell'evento, ordinano dal posto, pagano online o completano al bar e ricevono istruzioni chiare per il ritiro.</p>
+        <div class="fan-access-pill" aria-label="Web app QR, nessun download app">
+          <svg class="qr-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M7 7h12v12H7zM29 7h12v12H29zM7 29h12v12H7z"></path>
+            <path d="M12 12h2v2h-2zM34 12h2v2h-2zM12 34h2v2h-2zM27 27h5v5h-5zM35 27h6v4h-6zM27 36h4v5h-4zM35 35h2v6h-2zM40 36h1v5h-1z"></path>
+            <path d="M3 15V5a2 2 0 0 1 2-2h10M33 3h10a2 2 0 0 1 2 2v10M45 33v10a2 2 0 0 1-2 2H33M15 45H5a2 2 0 0 1-2-2V33"></path>
+          </svg>
+          <div>
+            <strong>Web app QR</strong>
+            <span>Nessun download app</span>
+          </div>
+        </div>
         <div class="progress-stack" aria-label="Avanzamento esperienza fan">
           <div class="progress-row">
             <span>Ordine</span>
@@ -389,26 +400,43 @@
       <div class="phone-stage reveal">
         <div class="app-stage-head">
           <span>Fan journey</span>
-          <strong>Ordina dal posto</strong>
+          <strong>Scansiona, ordina dal posto</strong>
         </div>
         <figure class="phone-cutout">
-          <img src="assets/orlay-phone-cutout.png" alt="App mobile Orlay Pay con menu evento, ordine e pagamento" loading="lazy" width="440" height="855">
+          <img src="assets/orlay-phone-cutout.png" alt="Web app QR Orlay Pay con menu evento, ordine e pagamento" loading="lazy" width="440" height="855">
         </figure>
-        <div class="phone-notes" aria-label="Funzioni principali app mobile">
+        <div class="phone-notes" aria-label="Funzioni principali web app QR">
           <article>
-            <span>01</span>
-            <strong>Menu live</strong>
-            <p>Disponibilità aggiornata per area.</p>
+            <span class="note-kicker">
+              <span class="note-number">01</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"></path><path d="M17 17h3"></path></svg>
+            </span>
+            <strong>Menu per area</strong>
+            <p>Mostra prodotti, prezzi e disponibilità corretti per ogni zona, pubblico o punto di servizio.</p>
           </article>
           <article>
-            <span>02</span>
+            <span class="note-kicker">
+              <span class="note-number">02</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3z"></path><path d="M3 10h18M7 15h4"></path><path d="m16 15 1.5 1.5L21 13"></path></svg>
+            </span>
             <strong>Checkout rapido</strong>
-            <p>Pagamento dal telefono senza seconda coda.</p>
+            <p>Permetti ai fan di pagare dal telefono e riduci la seconda coda al banco.</p>
           </article>
           <article>
-            <span>03</span>
-            <strong>Pickup guidato</strong>
-            <p>Punto e tempo stimato sempre chiari.</p>
+            <span class="note-kicker">
+              <span class="note-number">03</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h4"></path><path d="M17 15h4v5h-4z"></path></svg>
+            </span>
+            <strong>Fallback paga al bar</strong>
+            <p>Se il pagamento online non è il percorso giusto, il fan può completare l'acquisto al bar senza perdere l'ordine.</p>
+          </article>
+          <article>
+            <span class="note-kicker">
+              <span class="note-number">04</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            </span>
+            <strong>Ritiro guidato</strong>
+            <p>Punto di ritiro, codice, tempo stimato e indicazioni restano sempre visibili sul telefono.</p>
           </article>
         </div>
       </div>
