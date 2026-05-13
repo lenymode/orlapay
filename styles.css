@@ -4106,18 +4106,21 @@ textarea:focus {
 
 .staff-flow-list {
   grid-template-columns: 1fr;
+  counter-reset: staff-flow;
   gap: 0;
-  margin-top: 34px;
+  margin-top: 30px;
   border-top: 1px solid var(--line);
 }
 
 .staff-flow-list article {
+  counter-increment: staff-flow;
   display: grid;
-  grid-template-columns: minmax(94px, auto) minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: 42px minmax(0, 1fr);
+  column-gap: 18px;
+  row-gap: 3px;
   align-items: start;
   min-height: auto;
-  padding: 20px 0;
+  padding: 14px 0;
   border: 0;
   border-bottom: 1px solid var(--line);
   border-radius: 0;
@@ -4126,27 +4129,46 @@ textarea:focus {
   backdrop-filter: none;
 }
 
-.staff-flow-list span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 32px;
-  margin: 0;
-  padding: 0 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--cyan-soft);
+.staff-flow-list article::before {
+  content: counter(staff-flow, decimal-leading-zero);
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid color-mix(in srgb, var(--cyan) 36%, var(--line));
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--cyan-soft) 76%, transparent);
   color: var(--cyan-dark);
-  font-size: 10px;
-  font-weight: 700;
-  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.staff-flow-list span {
+  display: block;
+  grid-column: 2;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--cyan-dark);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: normal;
 }
 
 .staff-flow-list strong {
   display: block;
-  max-width: 420px;
-  font-size: 19px;
-  line-height: 1.35;
+  grid-column: 2;
+  max-width: 560px;
+  color: color-mix(in srgb, var(--ink) 88%, var(--muted));
+  font-size: clamp(17px, 1.22vw, 20px);
+  font-weight: 650;
+  line-height: 1.22;
 }
 
 @media (max-width: 1080px) {
@@ -4192,8 +4214,20 @@ textarea:focus {
   }
 
   .staff-flow-list article {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 36px minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 3px;
+    padding: 16px 0;
+  }
+
+  .staff-flow-list article::before {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+  }
+
+  .staff-flow-list strong {
+    font-size: 16px;
   }
 
   .pos-device-cutout {
