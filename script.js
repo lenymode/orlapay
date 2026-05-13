@@ -5,6 +5,7 @@ const navLinks = [...document.querySelectorAll(".site-nav a")];
 const revealItems = [...document.querySelectorAll(".reveal")];
 const pageSections = [...document.querySelectorAll("main section[id]")];
 const problemSection = document.querySelector("#problema");
+const zonePercentages = [...document.querySelectorAll("[data-zone-value]")];
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const brandLink = document.querySelector(".brand[href='#top']");
 const storedTheme = localStorage.getItem("orlay-theme");
@@ -155,11 +156,46 @@ if (themeToggle) {
   });
 }
 
+const animateZonePercentages = () => {
+  zonePercentages.forEach((item) => {
+    if (item.dataset.animated === "true") return;
+
+    const target = Number(item.dataset.zoneValue);
+    if (!Number.isFinite(target)) return;
+
+    item.dataset.animated = "true";
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      item.textContent = `${target}%`;
+      return;
+    }
+
+    const duration = 980;
+    const start = performance.now();
+
+    const update = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      item.textContent = `${Math.round(target * eased)}%`;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    };
+
+    item.textContent = "0%";
+    requestAnimationFrame(update);
+  });
+};
+
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
+        if (entry.target.classList.contains("wayfinding-panel")) {
+          animateZonePercentages();
+        }
         observer.unobserve(entry.target);
       }
     });
@@ -168,6 +204,7 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => observer.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
+  animateZonePercentages();
 }
 
 if (problemSection && "IntersectionObserver" in window) {

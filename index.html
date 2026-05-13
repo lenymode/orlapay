@@ -279,6 +279,37 @@
         <h2>Un unico flusso connesso: ordina, paga, servi, controlla.</h2>
         <p>Orlay Pay collega il percorso del fan, il lavoro dello staff e la control room dell'organizzatore nei momenti in cui ogni minuto conta.</p>
       </div>
+      <div class="how-it-works-flow reveal" aria-label="How Orlay Pay works in four steps">
+        <div class="flow-line" aria-hidden="true"><span></span></div>
+        <article>
+          <span class="flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"></path><path d="M14 14h2v2h-2zM18 14h2v6h-4v-2h2zM14 18h2v2h-2z"></path></svg>
+          </span>
+          <span class="flow-step">01</span>
+          <strong>Scan QR</strong>
+        </article>
+        <article>
+          <span class="flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 5h9l-1 15H6L5 5Z"></path><path d="M8 5V3h8"></path><path d="M16 8h4l-1 8h-3"></path><path d="M7 10h6"></path></svg>
+          </span>
+          <span class="flow-step">02</span>
+          <strong>Order</strong>
+        </article>
+        <article>
+          <span class="flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 7h18v10H3z"></path><path d="M3 10h18M7 15h4"></path><path d="M16 15h5"></path><path d="m19 12 3 3-3 3"></path></svg>
+          </span>
+          <span class="flow-step">03</span>
+          <strong>Pay or Pay-at-Bar</strong>
+        </article>
+        <article>
+          <span class="flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7z"></path><path d="M9 8a3 3 0 0 1 6 0"></path><path d="m9 14 2 2 4-4"></path></svg>
+          </span>
+          <span class="flow-step">04</span>
+          <strong>Pickup</strong>
+        </article>
+      </div>
       <div class="ops-flow reveal" aria-label="Flusso operativo connesso Orlay Pay">
         <article class="ops-step">
           <span class="ops-index">01</span>
@@ -402,9 +433,12 @@
           <span>Fan journey</span>
           <strong>Scansiona, ordina dal posto</strong>
         </div>
-        <figure class="phone-cutout">
-          <img src="assets/orlay-phone-cutout.png" alt="Web app QR Orlay Pay con menu evento, ordine e pagamento" loading="lazy" width="440" height="855">
-        </figure>
+        <div class="phone-visual-wrap">
+          <span class="phone-download-chip">No App Download</span>
+          <figure class="phone-cutout">
+            <img src="assets/orlay-phone-cutout.png" alt="Web app QR Orlay Pay con menu evento, ordine e pagamento" loading="lazy" width="440" height="855">
+          </figure>
+        </div>
         <div class="phone-notes" aria-label="Funzioni principali web app QR">
           <article>
             <span class="note-kicker">
@@ -507,28 +541,31 @@
             <span>Summer Festival</span>
             <strong>Pressione live per area</strong>
           </div>
-          <span class="sync-pill">Soglie attive</span>
+          <div class="wayfinding-head-badges">
+            <span class="demo-data-badge map-demo-badge">Dati demo</span>
+            <span class="sync-pill">Soglie attive</span>
+          </div>
         </div>
         <div class="wayfinding-body">
           <div class="zone-list">
-            <article class="zone-card is-busy">
+            <article class="zone-card is-busy" style="--zone-target: 92">
               <span class="zone-type">Food court</span>
-              <strong>92%</strong>
+              <strong data-zone-value="92">92%</strong>
               <p>Indirizza gli ordini al punto di ritiro corretto e rileva le aree sovraccariche prima che la coda cresca.</p>
             </article>
-            <article class="zone-card">
+            <article class="zone-card" style="--zone-target: 68">
               <span class="zone-type">Bar e punti servizio</span>
-              <strong>68%</strong>
+              <strong data-zone-value="68">68%</strong>
               <p>Bilancia la domanda tra più banchi e apri corsie rapide quando serve.</p>
             </article>
-            <article class="zone-card">
+            <article class="zone-card" style="--zone-target: 42">
               <span class="zone-type">VIP e hospitality</span>
-              <strong>42%</strong>
+              <strong data-zone-value="42">42%</strong>
               <p>Crea menu, punti di ritiro e percorsi dedicati per gli ospiti premium.</p>
             </article>
-            <article class="zone-card">
+            <article class="zone-card" style="--zone-target: 74">
               <span class="zone-type">Merchandising</span>
-              <strong>74%</strong>
+              <strong data-zone-value="74">74%</strong>
               <p>Gestisci finestre di acquisto brevi e intense senza mescolare la coda merch con food &amp; beverage.</p>
             </article>
           </div>
@@ -662,7 +699,10 @@
             <span>Piano prossimo evento</span>
             <strong>Summer Festival</strong>
           </div>
-          <b>5 leve</b>
+          <div class="report-head-badges">
+            <span class="demo-data-badge report-demo-badge">Dati demo</span>
+            <b>5 leve</b>
+          </div>
         </div>
         <div class="report-hero">
           <div>

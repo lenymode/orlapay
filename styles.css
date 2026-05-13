@@ -23,6 +23,12 @@
   --font-display: var(--font-body);
 }
 
+@property --zone-percent {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
 body[data-theme="dark"] {
   color-scheme: dark;
   --ink: #f5fbfd;
@@ -1715,8 +1721,34 @@ figcaption,
   line-height: 1.05;
 }
 
-.sync-pill {
+.wayfinding-head-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.wayfinding-head .wayfinding-head-badges > span {
+  display: inline-flex;
+  align-items: center;
   min-height: 34px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 760;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.wayfinding-head .map-demo-badge {
+  border: 1px solid #979797;
+  background: rgb(255 255 255 / 8%);
+  color: #717171;
+}
+
+.wayfinding-head .sync-pill {
+  border-color: color-mix(in srgb, var(--green) 32%, var(--line));
   background: rgba(24, 168, 121, 0.13);
   color: var(--green);
 }
@@ -1741,6 +1773,9 @@ figcaption,
 }
 
 .zone-card {
+  --zone-color: var(--cyan);
+  --zone-percent: 0;
+  --zone-target: 68;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -1768,6 +1803,7 @@ figcaption,
 }
 
 .zone-card::before {
+  --zone-percent: 0;
   content: "";
   grid-area: value;
   align-self: center;
@@ -1777,10 +1813,15 @@ figcaption,
   border-radius: 50%;
   background:
     radial-gradient(circle at 50% 50%, var(--panel-strong) 0 46%, transparent 47%),
-    conic-gradient(var(--cyan) 0 68%, color-mix(in srgb, var(--line) 72%, transparent) 68% 100%);
+    conic-gradient(
+      var(--zone-color) 0 calc(var(--zone-percent) * 1%),
+      color-mix(in srgb, var(--line) 72%, transparent) calc(var(--zone-percent) * 1%) 100%
+    );
+  transition: --zone-percent 1100ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .zone-card.is-busy {
+  --zone-color: var(--red);
   border-color: rgba(244, 51, 61, 0.34);
   background: linear-gradient(
     135deg,
@@ -1796,7 +1837,14 @@ figcaption,
 .zone-card.is-busy::before {
   background:
     radial-gradient(circle at 50% 50%, var(--panel-strong) 0 46%, transparent 47%),
-    conic-gradient(var(--red) 0 92%, color-mix(in srgb, var(--line) 72%, transparent) 92% 100%);
+    conic-gradient(
+      var(--zone-color) 0 calc(var(--zone-percent) * 1%),
+      color-mix(in srgb, var(--line) 72%, transparent) calc(var(--zone-percent) * 1%) 100%
+    );
+}
+
+.wayfinding-panel.is-visible .zone-card::before {
+  --zone-percent: var(--zone-target);
 }
 
 .zone-card strong {
@@ -2579,6 +2627,16 @@ textarea:focus {
   }
 }
 
+@keyframes flowLineGrow {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
 @keyframes analyticsAura {
   from {
     opacity: 0.68;
@@ -3034,6 +3092,10 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .wayfinding-head-badges {
+    justify-content: flex-start;
+  }
+
   .wayfinding-head strong {
     font-size: 24px;
   }
@@ -3052,7 +3114,7 @@ textarea:focus {
   }
 
   .zone-card strong {
-    font-size: 12x;
+    font-size: 12px;
   }
 
   .wayfinding-action {
@@ -3441,6 +3503,178 @@ textarea:focus {
   justify-content: center;
 }
 
+.how-it-works-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  width: min(100%, 1040px);
+  margin: 38px auto 0;
+  padding: 34px 0 4px;
+  overflow: visible;
+}
+
+.how-it-works-flow::before {
+  content: "How it works in 4 steps";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 2;
+  transform: translateX(-50%);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.flow-line {
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  top: 70px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--cyan) 18%, transparent),
+    color-mix(in srgb, var(--green) 18%, transparent),
+    color-mix(in srgb, var(--red) 14%, transparent),
+    color-mix(in srgb, var(--cyan) 18%, transparent)
+  );
+  overflow: hidden;
+}
+
+.flow-line span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--green), var(--cyan));
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.how-it-works-flow article {
+  --step-color: var(--cyan);
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  gap: 9px;
+  min-height: 122px;
+  padding: 0 8px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 560ms ease,
+    transform 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.how-it-works-flow article:nth-of-type(2) {
+  --step-color: var(--green);
+}
+
+.how-it-works-flow article:nth-of-type(3) {
+  --step-color: #8f63ff;
+}
+
+.how-it-works-flow article:nth-of-type(4) {
+  --step-color: var(--red);
+}
+
+.how-it-works-flow article::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--paper);
+  border-radius: 50%;
+  background: var(--step-color);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--step-color) 42%, var(--line)),
+    0 0 0 7px color-mix(in srgb, var(--step-color) 12%, transparent);
+}
+
+.how-it-works-flow article:hover .flow-icon {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px color-mix(in srgb, var(--step-color) 24%, transparent);
+}
+
+.flow-icon {
+  position: relative;
+  z-index: 2;
+  display: inline-grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 8px;
+  border: 1px solid color-mix(in srgb, var(--step-color) 54%, var(--line));
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.88), transparent 28%),
+    color-mix(in srgb, var(--step-color) 13%, var(--panel-strong));
+  color: color-mix(in srgb, var(--step-color) 82%, var(--ink));
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--step-color) 16%, transparent);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.flow-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flow-step {
+  color: color-mix(in srgb, var(--step-color) 72%, var(--muted));
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.how-it-works-flow strong {
+  color: var(--ink);
+  font-size: clamp(16px, 1.25vw, 19px);
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.how-it-works-flow.is-visible .flow-line span {
+  animation: flowLineGrow 920ms cubic-bezier(0.2, 0.8, 0.2, 1) 120ms both;
+}
+
+.how-it-works-flow.is-visible article {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.how-it-works-flow.is-visible article:nth-of-type(1) {
+  transition-delay: 80ms;
+}
+
+.how-it-works-flow.is-visible article:nth-of-type(2) {
+  transition-delay: 200ms;
+}
+
+.how-it-works-flow.is-visible article:nth-of-type(3) {
+  transition-delay: 320ms;
+}
+
+.how-it-works-flow.is-visible article:nth-of-type(4) {
+  transition-delay: 440ms;
+}
+
 .ops-flow {
   position: relative;
   display: grid;
@@ -3620,6 +3854,20 @@ textarea:focus {
   color: var(--ink);
   font-size: 44px;
   line-height: 1;
+}
+
+.report-head-badges {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.report-demo-badge {
+  min-height: 34px;
+  border-color: color-mix(in srgb, var(--line) 86%, #979797);
+  background: color-mix(in srgb, var(--panel-strong) 56%, transparent);
+  color: var(--muted);
 }
 
 .report-hero {
@@ -3842,6 +4090,16 @@ textarea:focus {
     padding-top: 0;
   }
 
+  .how-it-works-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+    row-gap: 30px;
+  }
+
+  .flow-line {
+    display: none;
+  }
+
   .ops-flow::before,
   .ops-flow::after {
     display: none;
@@ -3885,6 +4143,65 @@ textarea:focus {
   .report-grid,
   .ops-flow {
     grid-template-columns: 1fr;
+  }
+
+  .how-it-works-flow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 40px 0 0;
+  }
+
+  .how-it-works-flow::before {
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .how-it-works-flow article {
+    grid-template-columns: auto 38px 1fr;
+    grid-template-rows: auto;
+    justify-items: start;
+    align-items: center;
+    min-height: 66px;
+    padding: 0 0 0 6px;
+    text-align: left;
+  }
+
+  .how-it-works-flow article::before {
+    left: 22px;
+    top: 52px;
+    width: 8px;
+    height: 8px;
+    border-width: 2px;
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--step-color) 12%, transparent);
+  }
+
+  .how-it-works-flow article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 64px;
+    bottom: -12px;
+    width: 2px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--line) 82%, transparent);
+  }
+
+  .flow-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 0;
+    border-radius: 16px;
+  }
+
+  .flow-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .flow-step {
+    justify-self: center;
   }
 
   .report-grid article {
@@ -3944,6 +4261,10 @@ textarea:focus {
   .report-head {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .report-head-badges {
+    justify-content: flex-start;
   }
 
   .report-head b {
@@ -4152,13 +4473,18 @@ textarea:focus {
   pointer-events: none;
 }
 
-.phone-cutout {
+.phone-visual-wrap {
   grid-area: phone;
   position: relative;
   z-index: 1;
   align-self: center;
   justify-self: center;
   width: min(350px, 100%);
+}
+
+.phone-cutout {
+  position: relative;
+  width: 100%;
   aspect-ratio: 0.53;
   margin: 0;
   overflow: hidden;
@@ -4221,6 +4547,27 @@ textarea:focus {
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
+}
+
+.phone-download-chip {
+  position: absolute;
+  right: 10px;
+  bottom: -12px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(7, 16, 21, 0.82);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
 }
 
 .phone-notes {
@@ -4460,8 +4807,12 @@ textarea:focus {
     padding: 22px;
   }
 
-  .phone-cutout {
+  .phone-visual-wrap {
     width: min(280px, 100%);
+  }
+
+  .phone-download-chip {
+    right: 8px;
   }
 
   .progress-row,
