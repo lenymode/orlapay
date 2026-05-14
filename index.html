@@ -5,45 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Orlay Pay | Continuità di vendita per eventi live</title>
   <meta name="description" content="Orlay Pay aiuta organizzatori, venue e operatori food & beverage a ridurre code, rinunce e perdita di vendite negli eventi live ad alta affluenza.">
-  <link rel="icon" href="assets/orlay-icon.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/images/orlay-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-theme="light">
   <a class="skip-link" href="#main">Salta al contenuto</a>
 
   <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="Orlay Pay">
-      <img src="assets/orlay-logo.png" alt="Orlay Pay" width="145" height="38">
+      <img src="assets/images/orlay-logo.png" alt="Orlay Pay" width="145" height="38">
     </a>
 
     <nav class="site-nav" aria-label="Navigazione principale">
-      <a href="#problema">Problema</a>
-      <a href="#soluzione">Soluzione</a>
-      <a href="#controllo">Controllo live</a>
-      <a href="#demo">Demo</a>
+      <a href="#soluzione">Come funziona</a>
+      <a href="#controllo">Controllo organizer</a>
+      <a href="#esperienza">Esperienza fan</a>
+      <a href="#staff">Flusso staff</a>
+      <a href="#target">Casi d'uso</a>
     </nav>
 
-    <a class="nav-cta" href="#demo">Richiedi una demo</a>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Passa alla modalità scura" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.36-6.36 1.42-1.42M4.22 19.78l1.42-1.42m12.72 0 1.42 1.42M4.22 4.22l1.42 1.42"></path><circle cx="12" cy="12" r="4"></circle></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 14.4A8.7 8.7 0 0 1 9.6 3.2a8.8 8.8 0 1 0 11.2 11.2Z"></path></svg>
+      </button>
+      <a class="nav-cta" href="#demo">Revisione flussi</a>
+    </div>
   </header>
 
   <main id="main">
     <section class="hero section-shell" id="top">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Continuità di vendita per eventi live ad alta affluenza</p>
-        <h1>Il pubblico è già lì. Non perdere <span class="hero-highlight">vendite nei momenti di picco.</span></h1>
-        <p class="hero-text">Orlay Pay aiuta organizzatori, venue e operatori food &amp; beverage a rendere ordine, incasso e ritiro più fluidi: meno code, meno rinunce, più controllo operativo.</p>
+        <p class="eyebrow">Per festival, stadi, arene e venue ad alta affluenza</p>
+        <h1>Mantieni le vendite fluide quando code, pagamenti e ritiri raggiungono il picco.</h1>
+        <p class="hero-text">Orlay Pay collega una web app QR per i fan, uno schermo di servizio per lo staff e una regia di controllo per l’organizzatore. I fan ordinano e pagano dal telefono o completano al bar, lo staff serve più velocemente ordini già preparati e il team vede domanda, ricavi e congestione dei ritiri per zona in tempo reale.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#demo">Richiedi una demo</a>
-          <p class="microline">Food &amp; beverage · Hospitality · Aree VIP · Punti bar · Merchandising</p>
+          <a class="button primary" href="#demo">Prenota la revisione</a>
+          <a class="button secondary" href="#soluzione">Scopri come funziona</a>
+        </div>
+        <div class="trust-strip" aria-label="Funzionalità principali Orlay Pay">
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M10 18h4"></path><path d="m9 11 2 2 4-5"></path></svg>Nessun download app</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3z"></path><path d="M3 10h18"></path><path d="M7 15h4"></path></svg>Pagamento online o al bar</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"></path><path d="M6 20V8l6-4 6 4v12"></path><path d="M9 20v-6h6v6"></path></svg>Ritiro per zona</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-5 3 3 5-7"></path></svg>Dashboard ricavi live</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-7V2Z"></path></svg>Pensato per i picchi evento</span>
         </div>
       </div>
 
       <div class="hero-visual reveal" aria-label="Console operativa Orlay Pay">
         <div class="hero-orb" aria-hidden="true"></div>
+        <p class="dashboard-note">Dati evento illustrativi</p>
+        <div class="dashboard-float top" aria-hidden="true">
+          <span>Revenue live</span>
+          <strong>€84.760</strong>
+        </div>
+        <div class="dashboard-float bottom" aria-hidden="true">
+          <span>Pickup B</span>
+          <strong>Apri ora</strong>
+        </div>
         <div class="live-console">
           <div class="console-main">
             <div class="console-brandbar">
-              <img src="assets/orlay-logo.png" alt="" width="112" height="29">
+              <span class="console-logo"><img src="assets/images/orlay-logo.png" alt="" width="112" height="29"></span>
               <div class="console-tabs" aria-label="Viste dashboard">
                 <span class="is-active">Live</span>
                 <span>Punti bar</span>
@@ -59,9 +85,9 @@
               <span class="live-badge">Evento in corso</span>
             </div>
             <div class="console-status-strip" aria-label="Stato operativo live">
-              <span>Gate A</span>
-              <span>21:35</span>
-              <span>3 alert</span>
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>Gate A</span>
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3 2"></path><circle cx="12" cy="12" r="9"></circle></svg>21:35</span>
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 4.3 2.7 17.5A2 2 0 0 0 4.4 20h15.2a2 2 0 0 0 1.7-2.5L13.7 4.3a2 2 0 0 0-3.4 0Z"></path></svg>3 alert</span>
             </div>
             <div class="kpi-grid">
               <article class="kpi-card">
@@ -123,240 +149,694 @@
       </div>
     </section>
 
-    <section class="section-shell split-section problem-section" id="problema">
-      <div class="section-intro reveal">
-        <p class="eyebrow">Il collo di bottiglia</p>
-        <h2>La vendita si perde prima del pagamento.</h2>
-        <p>Quando l’affluenza cresce, il punto di servizio diventa il collo di bottiglia: il pubblico aspetta, ordina meno o rinuncia. Lo staff gestisce confusione invece di servire.</p>
+    <section class="section-shell definition-section" id="what-is-orlay-pay">
+      <div class="definition-intro reveal">
+        <p class="eyebrow">Cos'è Orlay Pay?</p>
+        <h2>Una piattaforma unica per il commerce nel giorno dell'evento.</h2>
+        <p>Orlay Pay non è solo uno strumento di pagamento. È un livello operativo per food &amp; beverage, hospitality, aree VIP, merchandising e punti di ritiro dedicati durante gli eventi live.</p>
+      </div>
+      <div class="definition-cards reveal" aria-label="Orlay Pay event lifecycle">
+        <article class="definition-card">
+          <span class="definition-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 2v4m8-4v4M3 10h18"></path><path d="M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"></path><path d="M8 15h3m5 0h.01M8 18h.01m4-.01h4"></path></svg>
+          </span>
+          <span class="definition-step">Prima</span>
+          <h3>Prima dell'evento</h3>
+          <p>Configura menu, prezzi, zone di ritiro, punti di servizio e flussi dedicati per ogni pubblico.</p>
+        </article>
+        <article class="definition-card is-featured">
+          <span class="definition-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M10 17h4"></path><path d="M9 8h6m-6 4h3"></path><path d="M20 7v5l2 2m-18-2-2 2V9"></path></svg>
+          </span>
+          <span class="definition-step">Live</span>
+          <h3>Durante l'evento</h3>
+          <p>Permetti ai fan di ordinare dal telefono, allo staff di servire ordini strutturati e al team di monitorare la pressione live per area.</p>
+        </article>
+        <article class="definition-card">
+          <span class="definition-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path><path d="M16 7h3v3"></path></svg>
+          </span>
+          <span class="definition-step">Dopo</span>
+          <h3>Dopo l'evento</h3>
+          <p>Capisci cosa ha venduto, dove si sono formate le code, quali zone hanno performato meno e cosa migliorare nel prossimo evento.</p>
+        </article>
+      </div>
+      <div class="definition-signal reveal" aria-hidden="true">
+        <span></span>
+        <i></i>
+        <span></span>
+      </div>
+    </section>
+
+    <section class="section-shell problem-section" id="problema">
+      <div class="problem-copy reveal">
+        <div class="problem-label-row">
+          <p class="eyebrow">Il collo di bottiglia</p>
+          <span class="demo-data-badge">Dati demo</span>
+        </div>
+        <h2>Nei picchi di domanda il ricavo sparisce.</h2>
+        <p>Quando i fan devono scegliere, pagare, aspettare e chiedere dove ritirare, la coda diventa una perdita di vendite.</p>
         <div class="pressure-panel" aria-label="Scenario operativo durante un picco evento">
-          <span>Picco live</span>
-          <strong>21:35</strong>
-          <p>Domanda alta, staff saturo, dati ancora frammentati.</p>
+          <div class="pressure-copy">
+            <span>Picco live</span>
+            <strong>-32%</strong>
+            <div class="pressure-time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+              <span>21:35</span>
+            </div>
+          </div>
+          <div class="sales-drop-visual" aria-label="andamento vendite in calo durante il picco">
+            <div class="sales-drop-head">
+              <span>Trend vendite</span>
+            </div>
+            <svg class="sales-pulse-chart" viewBox="0 0 260 96" aria-hidden="true">
+              <path class="pulse-grid" d="M0 18H260M0 48H260M0 78H260"></path>
+              <path class="pulse-line" d="M0 26H34L43 20L58 30H88L101 28L113 42H139L151 39L168 58H195L209 70H236L260 70"></path>
+              <path class="pulse-drop" d="M168 58H195L209 70H236L260 70"></path>
+            </svg>
+            <div class="sales-drop-foot">
+              <span>Prima della coda</span>
+              <span>Coda al picco</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card-grid three">
-        <article class="info-card reveal">
-          <div class="info-card-head">
-            <span class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 18h16M7 14h10M9 10h6M12 3v3M5 7h14"></path></svg>
-            </span>
-            <strong class="pain-metric">2x</strong>
+      <div class="bottleneck-board reveal" aria-label="Monitor criticità evento">
+        <div class="board-topline">
+          <div>
+            <span class="status-dot"></span>
+            <strong>Monitor pressione live</strong>
           </div>
-          <h3>Code e doppia attesa</h3>
-          <p>Il fan perde tempo tra scelta, pagamento e ritiro.</p>
-        </article>
-        <article class="info-card reveal">
-          <div class="info-card-head">
-            <span class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M4 13a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v5h5"></path></svg>
-            </span>
-            <strong class="pain-metric">+38%</strong>
+        </div>
+        <div class="flow-lanes">
+          <article class="flow-lane is-hot">
+            <span class="lane-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18h16M7 14h10M9 10h6M12 3v3M5 7h14"></path></svg></span>
+            <div>
+              <strong>Le vendite si perdono prima del checkout</strong>
+              <p>I fan lasciano la fila, comprano meno o rimandano l'acquisto quando l'attesa sembra incerta.</p>
+            </div>
+            <b>2x</b>
+          </article>
+          <article class="flow-lane">
+            <span class="lane-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M4 13a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v5h5"></path></svg></span>
+            <div>
+              <strong>Lo staff smette di servire e inizia a risolvere problemi</strong>
+              <p>Gli operatori perdono tempo a ricostruire ordini, verificare pagamenti e spiegare il ritiro.</p>
+            </div>
+            <b>+38%</b>
+          </article>
+          <article class="flow-lane">
+            <span class="lane-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"></path><path d="M3 19h18"></path></svg></span>
+            <div>
+              <strong>I manager vedono il problema troppo tardi</strong>
+              <p>Ricavi, code, stato dei ritiri e performance di zona sono spesso divisi tra strumenti diversi.</p>
+            </div>
+            <b>T+1</b>
+          </article>
+          <article class="flow-lane">
+            <span class="lane-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path><path d="M16 7h3v3"></path></svg></span>
+            <div>
+              <strong>L'evento successivo parte da ipotesi</strong>
+              <p>Senza dati chiari, staffing, pricing e layout si decidono sulla percezione invece che sulle evidenze.</p>
+            </div>
+            <b>Dopo</b>
+          </article>
+        </div>
+        <div class="loss-meter" aria-label="Domanda persa stimata">
+          <div>
+            <span>Ricavo a rischio</span>
+            <strong>32%</strong>
           </div>
-          <h3>Staff sotto pressione</h3>
-          <p>Il banco rallenta quando deve ricostruire ordini, importi e prossime azioni.</p>
-        </article>
-        <article class="info-card reveal">
-          <div class="info-card-head">
-            <span class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"></path><path d="M3 19h18"></path></svg>
-            </span>
-            <strong class="pain-metric">T+1</strong>
-          </div>
-          <h3>Dati frammentati</h3>
-          <p>A fine evento è difficile capire dove si è persa domanda.</p>
-        </article>
+          <i aria-hidden="true"><span></span></i>
+          <small>La domanda non servita diventa rinuncia, attesa o scontrino più basso.</small>
+        </div>
       </div>
     </section>
 
     <section class="section-shell solution-section" id="soluzione">
-      <div class="section-intro centered reveal">
+      <div class="section-intro reveal">
         <p class="eyebrow">Regia operativa</p>
-        <h2>Una regia unica per trasformare il servizio in ricavo.</h2>
-        <p>Orlay Pay rende più leggibile il percorso del fan, più veloce il lavoro dello staff e più chiaro il controllo dell’organizzatore. Il risultato è un evento più ordinato nei momenti critici.</p>
+        <h2>Un unico flusso connesso: ordina, paga, servi, controlla.</h2>
+        <p>Orlay Pay collega il percorso del fan, il lavoro dello staff e la control room dell'organizzatore nei momenti in cui ogni minuto conta.</p>
       </div>
-      <div class="card-grid four">
-        <article class="benefit-card reveal">
-          <span class="number">01</span>
-          <h3>Più ordini completati</h3>
-          <p>Soprattutto nelle finestre di massima domanda.</p>
+      <div class="how-it-works-flow reveal" aria-label="How Orlay Pay works in four steps">
+        <div class="flow-line" aria-hidden="true"><span></span></div>
+        <article>
+          <span class="flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"></path><path d="M14 14h2v2h-2zM18 14h2v6h-4v-2h2zM14 18h2v2h-2z"></path></svg>
+          </span>
+          <span class="flow-step">01</span>
+          <strong>Scan QR</strong>
         </article>
-        <article class="benefit-card reveal">
-          <span class="number">02</span>
-          <h3>Più velocità al banco</h3>
-          <p>Meno passaggi manuali, meno errori, meno improvvisazione.</p>
+        <article>
+          <span class="flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 5h9l-1 15H6L5 5Z"></path><path d="M8 5V3h8"></path><path d="M16 8h4l-1 8h-3"></path><path d="M7 10h6"></path></svg>
+          </span>
+          <span class="flow-step">02</span>
+          <strong>Order</strong>
         </article>
-        <article class="benefit-card reveal">
-          <span class="number">03</span>
-          <h3>Più controllo per zona</h3>
-          <p>Ordini, incassi, ritiri e performance leggibili per area.</p>
+        <article>
+          <span class="flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 7h18v10H3z"></path><path d="M3 10h18M7 15h4"></path><path d="M16 15h5"></path><path d="m19 12 3 3-3 3"></path></svg>
+          </span>
+          <span class="flow-step">03</span>
+          <strong>Pay or Pay-at-Bar</strong>
         </article>
-        <article class="benefit-card reveal">
-          <span class="number">04</span>
-          <h3>Più valore post-evento</h3>
-          <p>Dati utili per decidere pricing, staffing e layout successivi.</p>
+        <article>
+          <span class="flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7z"></path><path d="M9 8a3 3 0 0 1 6 0"></path><path d="m9 14 2 2 4-4"></path></svg>
+          </span>
+          <span class="flow-step">04</span>
+          <strong>Pickup</strong>
+        </article>
+      </div>
+      <div class="ops-flow reveal" aria-label="Flusso operativo connesso Orlay Pay">
+        <article class="ops-step">
+          <span class="ops-index">01</span>
+          <span class="ops-tag">QR · Menu · Ordine</span>
+          <h3>I fan ordinano più velocemente</h3>
+          <p>Scansionano un QR code, vedono il menu corretto, ordinano dal telefono e ricevono istruzioni chiare per il ritiro.</p>
+        </article>
+        <article class="ops-step">
+          <span class="ops-index">02</span>
+          <span class="ops-tag">Pagamento · Stato · Azione</span>
+          <h3>Lo staff serve più velocemente</h3>
+          <p>Ogni ordine arriva strutturato, con articoli, stato del pagamento, codice di ritiro e prossima azione già visibili.</p>
+        </article>
+        <article class="ops-step is-primary">
+          <span class="ops-index">03</span>
+          <span class="ops-tag">Ricavi · Code · Zone</span>
+          <h3>Gli organizzatori agiscono in tempo reale</h3>
+          <p>Vedono ricavi live, ordini in attesa, pressione sui ritiri e zone critiche prima che la congestione diventi vendita persa.</p>
+        </article>
+        <article class="ops-step">
+          <span class="ops-index">04</span>
+          <span class="ops-tag">Dati · Pricing · Layout</span>
+          <h3>Ogni evento migliora il successivo</h3>
+          <p>Usa i dati post-evento per ottimizzare pricing, staffing, layout e progettazione dell'offerta.</p>
         </article>
       </div>
     </section>
 
     <section class="section-shell product-section" id="controllo">
       <div class="section-intro reveal">
-        <p class="eyebrow">Vista organizzatore</p>
-        <h2>Controllo live dell’evento.</h2>
-        <p>Monitora ordini, incassi, ritiri, punti di servizio e aree critiche da una sola vista operativa.</p>
+        <p class="eyebrow">Dashboard organizzatore</p>
+        <h2>Controlla l'evento mentre il ricavo è ancora in gioco.</h2>
+        <p>Monitora incassi, ordini, pressione sui ritiri, punti di servizio e aree critiche da un'unica vista operativa live.</p>
+        <p class="section-body">Quando una zona va in sovraccarico, il team può aprire una nuova corsia di ritiro, spostare lo staff, indirizzare gli ospiti, mettere in pausa prodotti non disponibili o promuovere un punto di servizio più veloce prima che la coda diventi ricavo perso.</p>
+        <div class="decision-list" aria-label="Decisioni live per l'organizzatore">
+          <article>
+            <span class="decision-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"></path></svg>
+            </span>
+            <div>
+              <strong>Rileva la pressione</strong>
+              <p>Individua zone sovraccariche, code al ritiro e rallentamenti del servizio mentre accadono.</p>
+            </div>
+          </article>
+          <article>
+            <span class="decision-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12h12"></path><path d="m13 7 5 5-5 5"></path><path d="M4 5v14"></path></svg>
+            </span>
+            <div>
+              <strong>Scegli la prossima azione</strong>
+              <p>Apri corsie, sposta lo staff, sospendi prodotti o reindirizza gli ospiti da una sola vista live.</p>
+            </div>
+          </article>
+          <article>
+            <span class="decision-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-5 3 3 5-7"></path><path d="M16 6h3v3"></path></svg>
+            </span>
+            <div>
+              <strong>Proteggi il ricavo live</strong>
+              <p>Intervieni prima che la congestione diventi ordini abbandonati e vendite perse.</p>
+            </div>
+          </article>
+        </div>
       </div>
-      <figure class="product-frame reveal">
-        <img src="pitckdeckimages/section11-dashboard.png" alt="Dashboard Orlay Pay con KPI, stato evento, incassi, ordini e performance live" loading="eager" width="838" height="478">
-        <figcaption>Capisci dove la domanda cresce, dove il servizio rallenta e cosa correggere durante l’evento.</figcaption>
+      <figure class="product-frame control-dashboard-frame reveal">
+        <img src="assets/images/section11-dashboard.png" alt="Dashboard Orlay Pay con KPI live, incassi, ordini, pressione sui ritiri e azioni consigliate" loading="eager" width="838" height="478">
+        <div class="dashboard-feature-cloud" aria-label="Segnali dashboard organizzatore">
+          <span>Incassi live per area</span>
+          <span>Ordini in attesa ritiro</span>
+          <span>Punti critici</span>
+          <span>Ticket medio</span>
+          <span>Mix prodotti</span>
+          <span>Azione consigliata</span>
+        </div>
+        <div class="dashboard-action-card" aria-label="Azione live consigliata">
+          <span>Zona critica rilevata</span>
+          <strong>Apri ritiro B</strong>
+          <p>Sposta 2 membri dello staff alla Food Court</p>
+          <small>Indirizza i fan al punto di ritiro disponibile più vicino</small>
+        </div>
+        <figcaption>Dalla stessa vista live, l'organizzatore individua la pressione, sceglie la prossima azione e protegge le vendite prima che il picco diventi coda.</figcaption>
       </figure>
     </section>
 
+    <section class="section-shell phone-experience" id="esperienza">
+      <div class="phone-copy reveal">
+        <p class="eyebrow">Fan app</p>
+        <h2>Una web app QR che trasforma ogni telefono in un canale di vendita.</h2>
+        <p>I fan aprono Orlay Pay da un QR code, senza scaricare nulla dagli store. Vedono il menu dell'evento, ordinano dal posto, pagano online o completano al bar e ricevono istruzioni chiare per il ritiro.</p>
+        <div class="fan-access-pill" aria-label="Web app QR, nessun download app">
+          <svg class="qr-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M7 7h12v12H7zM29 7h12v12H29zM7 29h12v12H7z"></path>
+            <path d="M12 12h2v2h-2zM34 12h2v2h-2zM12 34h2v2h-2zM27 27h5v5h-5zM35 27h6v4h-6zM27 36h4v5h-4zM35 35h2v6h-2zM40 36h1v5h-1z"></path>
+            <path d="M3 15V5a2 2 0 0 1 2-2h10M33 3h10a2 2 0 0 1 2 2v10M45 33v10a2 2 0 0 1-2 2H33M15 45H5a2 2 0 0 1-2-2V33"></path>
+          </svg>
+          <div>
+            <strong>Web app QR</strong>
+            <span>Nessun download app</span>
+          </div>
+        </div>
+        <div class="progress-stack" aria-label="Avanzamento esperienza fan">
+          <div class="progress-row">
+            <span>Ordine</span>
+            <i aria-hidden="true"><b style="width: 92%"></b></i>
+            <strong>92%</strong>
+          </div>
+          <div class="progress-row">
+            <span>Pagamento</span>
+            <i aria-hidden="true"><b style="width: 84%"></b></i>
+            <strong>84%</strong>
+          </div>
+          <div class="progress-row">
+            <span>Ritiro</span>
+            <i aria-hidden="true"><b style="width: 76%"></b></i>
+            <strong>76%</strong>
+          </div>
+        </div>
+      </div>
+      <div class="phone-stage reveal">
+        <div class="app-stage-head">
+          <span>Fan journey</span>
+          <strong>Scansiona, ordina dal posto</strong>
+        </div>
+        <div class="phone-visual-wrap">
+          <span class="phone-download-chip">No App Download</span>
+          <figure class="phone-cutout">
+            <img src="assets/images/orlay-phone-cutout.png" alt="Web app QR Orlay Pay con menu evento, ordine e pagamento" loading="lazy" width="440" height="855">
+          </figure>
+        </div>
+        <div class="phone-notes" aria-label="Funzioni principali web app QR">
+          <article>
+            <span class="note-kicker">
+              <span class="note-number">01</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"></path><path d="M17 17h3"></path></svg>
+            </span>
+            <strong>Menu per area</strong>
+            <p>Mostra prodotti, prezzi e disponibilità corretti per ogni zona, pubblico o punto di servizio.</p>
+          </article>
+          <article>
+            <span class="note-kicker">
+              <span class="note-number">02</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3z"></path><path d="M3 10h18M7 15h4"></path><path d="m16 15 1.5 1.5L21 13"></path></svg>
+            </span>
+            <strong>Checkout rapido</strong>
+            <p>Permetti ai fan di pagare dal telefono e riduci la seconda coda al banco.</p>
+          </article>
+          <article>
+            <span class="note-kicker">
+              <span class="note-number">03</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h4"></path><path d="M17 15h4v5h-4z"></path></svg>
+            </span>
+            <strong>Fallback paga al bar</strong>
+            <p>Se il pagamento online non è il percorso giusto, il fan può completare l'acquisto al bar senza perdere l'ordine.</p>
+          </article>
+          <article>
+            <span class="note-kicker">
+              <span class="note-number">04</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            </span>
+            <strong>Ritiro guidato</strong>
+            <p>Punto di ritiro, codice, tempo stimato e indicazioni restano sempre visibili sul telefono.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell pos-app-section" id="staff">
+      <div class="pos-device-stage reveal">
+        <figure class="pos-device-cutout">
+          <img src="assets/images/orlay-pos-section10-cutout.png" alt="Schermo staff Orlay Pay con ordine, stato pagamento e conferma ritiro" loading="lazy" width="600" height="600">
+        </figure>
+      </div>
+      <div class="app-copy pos-copy reveal">
+        <p class="eyebrow">Flusso staff</p>
+        <h2>Lo staff serve gli ordini invece di ricostruirli.</h2>
+        <p>Ogni ordine arriva sullo schermo staff con prodotti, quantità, stato del pagamento, codice di ritiro e prossima azione già chiari.</p>
+        <div class="staff-flow-list" aria-label="Benefici del flusso staff">
+          <article>
+            <span>Ordini strutturati</span>
+            <strong>Niente interpretazioni manuali, screenshot da leggere o note scritte a mano.</strong>
+          </article>
+          <article>
+            <span>Stato pagamento visibile</span>
+            <strong>Lo staff vede subito se l'ordine è pagato online, in attesa di pagamento al bar, fallito o pronto per il ritiro.</strong>
+          </article>
+          <article>
+            <span>Conferma ritiro</span>
+            <strong>Consegna tramite codice, conferma il passaggio e mantiene aggiornata la coda di ritiro.</strong>
+          </article>
+          <article>
+            <span>Meno training nei picchi</span>
+            <strong>Il flusso è pensato per inserire rapidamente gli operatori durante le finestre di servizio ad alta pressione</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section-shell dashboard-intelligence">
+      <div class="dashboard-visual reveal">
+  
+        <figure class="dashboard-cutout safari-window">
+          <div class="safari-bar" aria-hidden="true">
+            <div class="safari-dots"><span></span><span></span><span></span></div>
+            <div class="safari-address">orlaypay.live/summer-festival/dashboard</div>
+            <span class="safari-status">Live</span>
+          </div>
+          <img src="assets/images/section11-dashboard.png" alt="Dashboard Orlay Pay con KPI, ordini, incassi e controllo aree live" loading="lazy" width="838" height="478">
+        </figure>
+      </div>
+      <div class="dashboard-copy reveal">
+        <p class="eyebrow">Regia dashboard</p>
+        <h2>Una regia chiara per decidere mentre l’evento è vivo.</h2>
+        <p>Ordini, incassi, ritiri e aree critiche diventano segnali semplici per agire durante il picco.</p>
+        <div class="experience-layers" aria-label="Benefici esperienza fan">
+          
+        </div>
+      </div>
+    </section> -->
+
     <section class="section-shell map-section" id="mappa">
       <div class="section-intro reveal">
-        <p class="eyebrow">Percorsi e aree</p>
-        <h2>L’evento diventa più leggibile.</h2>
-        <p>Aree, tempi e percorsi diventano leggibili per pubblico e staff, così ogni punto di servizio sa cosa fare nei momenti di picco.</p>
+        <p class="eyebrow">Controllo pressione pubblico</p>
+        <h2>Usa zone e punti di ritiro per ridurre la pressione sulle code.</h2>
+        <p>Configura aree di servizio, gruppi di ritiro, percorsi dedicati e menu per pubblico specifico, così ogni fan e ogni membro dello staff sa dove andare e cosa fare.</p>
       </div>
-      <div class="wayfinding-panel reveal" aria-label="Console percorsi e aree evento">
+      <div class="wayfinding-panel reveal" aria-label="Console controllo pressione aree evento">
         <div class="wayfinding-head">
           <div>
             <span>Summer Festival</span>
-            <strong>Aree operative</strong>
+            <strong>Pressione live per area</strong>
           </div>
-          <span class="sync-pill">Live sync</span>
+          <div class="wayfinding-head-badges">
+            <span class="demo-data-badge map-demo-badge">Dati demo</span>
+            <span class="sync-pill">Soglie attive</span>
+          </div>
         </div>
         <div class="wayfinding-body">
           <div class="zone-list">
-            <article class="zone-card is-busy">
+            <article class="zone-card is-busy" style="--zone-target: 92">
               <span class="zone-type">Food court</span>
-              <strong>12 min</strong>
-              <p>Coda alta, apri ritiro B</p>
+              <strong data-zone-value="92">92%</strong>
+              <p>Indirizza gli ordini al punto di ritiro corretto e rileva le aree sovraccariche prima che la coda cresca.</p>
             </article>
-            <article class="zone-card">
-              <span class="zone-type">Punti bar</span>
-              <strong>5 min</strong>
-              <p>Flusso regolare</p>
+            <article class="zone-card" style="--zone-target: 68">
+              <span class="zone-type">Bar e punti servizio</span>
+              <strong data-zone-value="68">68%</strong>
+              <p>Bilancia la domanda tra più banchi e apri corsie rapide quando serve.</p>
             </article>
-            <article class="zone-card">
-              <span class="zone-type">Area VIP</span>
-              <strong>3 min</strong>
-              <p>Accesso dedicato</p>
+            <article class="zone-card" style="--zone-target: 42">
+              <span class="zone-type">VIP e hospitality</span>
+              <strong data-zone-value="42">42%</strong>
+              <p>Crea menu, punti di ritiro e percorsi dedicati per gli ospiti premium.</p>
+            </article>
+            <article class="zone-card" style="--zone-target: 74">
+              <span class="zone-type">Merchandising</span>
+              <strong data-zone-value="74">74%</strong>
+              <p>Gestisci finestre di acquisto brevi e intense senza mescolare la coda merch con food &amp; beverage.</p>
             </article>
           </div>
           <aside class="wayfinding-action" aria-label="Aggiornamento operativo suggerito">
-            <span>Priorità ora</span>
-            <strong>Ribilancia i ritiri</strong>
-            <p>Il punto food court supera la soglia: invia staff al ritiro B e mostra il percorso migliore nella fan app.</p>
+            <span>Alert operativo</span>
+            <strong>Apri Pickup Lane B</strong>
+            <p>La Food Court ha superato la soglia di ritiro: apri la corsia B e sposta due membri dello staff prima della prossima pausa.</p>
           </aside>
         </div>
         <div class="route-board">
           <div class="route-step is-active">
             <span>01</span>
-            <strong>Ordine</strong>
-            <p>Menu e disponibilità per zona</p>
+            <strong>Menu dedicati</strong>
+            <p>Offerte diverse per fan, VIP, hospitality e merch.</p>
           </div>
           <div class="route-step">
             <span>02</span>
-            <strong>Pagamento</strong>
-            <p>Checkout dal telefono</p>
+            <strong>Ritiri per gruppo</strong>
+            <p>Ordini instradati verso il punto meno congestionato.</p>
           </div>
           <div class="route-step">
             <span>03</span>
-            <strong>Ritiro</strong>
-            <p>Punto e tempo stimato chiari</p>
+            <strong>Staff in movimento</strong>
+            <p>Azioni chiare quando una zona supera la soglia.</p>
           </div>
         </div>
         <div class="update-grid">
           <div>
             <span class="update-dot"></span>
-            <p>Push staff</p>
-            <strong>Apri corsia veloce</strong>
+            <p>Staff</p>
+            <strong>Sposta 2 operatori su Pickup B</strong>
           </div>
           <div>
             <span class="update-dot is-green"></span>
             <p>Fan app</p>
-            <strong>Mostra percorso migliore</strong>
+            <strong>Mostra ritiro e percorso aggiornati</strong>
           </div>
         </div>
       </div>
-      <p class="caption reveal">Utile per food court, bar, hospitality, VIP, merch e punti di ritiro dedicati.</p>
+      <p class="caption reveal">Utile per food court, bar, hospitality, VIP, merch e punti di ritiro dedicati quando la domanda si concentra in pochi minuti.</p>
     </section>
 
     <section class="section-shell audience-section" id="target">
       <div class="section-intro centered reveal">
         <p class="eyebrow">Contesti ideali</p>
-        <h2>Pensato per eventi dove ogni minuto di coda costa ricavo.</h2>
-        <p>Orlay Pay è adatto a contesti con alta densità di pubblico, più punti di servizio e domanda concentrata in finestre brevi.</p>
+        <h2>Creato per eventi dove i picchi decidono il ricavo.</h2>
+        <p>Orlay Pay è ideale quando migliaia di ospiti, più punti di servizio e finestre di acquisto brevi mettono pressione su vendite, staff e operazioni di ritiro.</p>
       </div>
-      <div class="chip-grid reveal" aria-label="Tipologie di eventi">
-        <span>Festival</span>
-        <span>Concerti</span>
-        <span>Stadi e palazzetti</span>
-        <span>Food court</span>
-        <span>Hospitality</span>
-        <span>Aree VIP</span>
-        <span>Merchandising</span>
-        <span>Eventi corporate</span>
+      <div class="best-fit-grid reveal" aria-label="Contesti ideali per Orlay Pay">
+        <article>
+          <div class="best-fit-top">
+            <span class="best-fit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 18V8l10-3v10"></path><path d="M8 18a3 3 0 1 1-2-2.83"></path><path d="M18 15a3 3 0 1 1-2-2.83"></path></svg>
+            </span>
+            <span class="best-fit-number">01</span>
+          </div>
+          <div class="best-fit-copy">
+            <h3>Festival e concerti</h3>
+            <p>Pause brevi, pubblico concentrato e alta domanda food &amp; beverage.</p>
+          </div>
+          <span class="best-fit-signal">Picchi concentrati tra apertura, cambio palco e fine show.</span>
+        </article>
+        <article>
+          <div class="best-fit-top">
+            <span class="best-fit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 10c2.3-3.3 13.7-3.3 16 0"></path><path d="M6 10v8"></path><path d="M18 10v8"></path><path d="M4 18h16"></path><path d="M8 14h8"></path></svg>
+            </span>
+            <span class="best-fit-number">02</span>
+          </div>
+          <div class="best-fit-copy">
+            <h3>Stadi e arene</h3>
+            <p>Più bar, food court e settori con picchi di domanda sincronizzati.</p>
+          </div>
+          <span class="best-fit-signal">Utile quando più zone devono reggere lo stesso intervallo.</span>
+        </article>
+        <article>
+          <div class="best-fit-top">
+            <span class="best-fit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9L12 3Z"></path></svg>
+            </span>
+            <span class="best-fit-number">03</span>
+          </div>
+          <div class="best-fit-copy">
+            <h3>Hospitality e aree VIP</h3>
+            <p>Menu dedicati, flussi di servizio premium e punti di ritiro separati.</p>
+          </div>
+          <span class="best-fit-signal">Perfetto per esperienze separate dal flusso generale.</span>
+        </article>
+        <article>
+          <div class="best-fit-top">
+            <span class="best-fit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 7h12l1 14H5L6 7Z"></path><path d="M9 7a3 3 0 0 1 6 0"></path><path d="M9 13h6"></path></svg>
+            </span>
+            <span class="best-fit-number">04</span>
+          </div>
+          <div class="best-fit-copy">
+            <h3>Stand merchandising</h3>
+            <p>Finestre di acquisto ad alta intensità prima, durante e dopo lo show.</p>
+          </div>
+          <span class="best-fit-signal">Riduce attrito quando la domanda arriva tutta insieme.</span>
+        </article>
+        <article>
+          <div class="best-fit-top">
+            <span class="best-fit-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12"></path><path d="M8 20v-6h8v6"></path><path d="M9 10h.01"></path><path d="M15 10h.01"></path></svg>
+            </span>
+            <span class="best-fit-number">05</span>
+          </div>
+          <div class="best-fit-copy">
+            <h3>Eventi corporate e privati</h3>
+            <p>Pubblico controllato, accessi segmentati ed esperienze di servizio su misura.</p>
+          </div>
+          <span class="best-fit-signal">Ideale per accessi, menu e servizi differenziati.</span>
+        </article>
       </div>
+      <p class="best-fit-note reveal">
+        <strong>Non ogni venue ha bisogno di <img src="assets/images/orlay-logo.png" alt="Orlay Pay">.</strong>
+        <span>È pensato per eventi in cui code, punti di servizio e picchi di domanda incidono direttamente sul ricavo.</span>
+      </p>
     </section>
 
     <section class="section-shell analytics-section" id="analytics">
       <div class="analytics-copy reveal">
         <p class="eyebrow">Post-evento</p>
-        <h2>Il valore non finisce a fine serata.</h2>
-        <p>Leggi cosa converte, cosa rallenta e dove si perde domanda. Usa i dati per migliorare pricing, staffing, layout e offerta del prossimo evento.</p>
+        <h2>Trasforma ogni evento in un piano migliore per il prossimo.</h2>
+        <p>Dopo l'evento, Orlay Pay mostra cosa ha convertito, cosa ha rallentato e dove si è persa domanda, così le decisioni su personale, pricing e layout successivi si basano sui dati.</p>
       </div>
-      <div class="mini-grid">
-        <article class="mini-card reveal">
-          <span class="mini-label">Aree</span>
-          <h3>Performance per area</h3>
-          <strong>+18%</strong>
-          <p>Quali zone vendono e quali rallentano.</p>
-          <div class="mini-insight"><span>Area calda</span><i aria-hidden="true"></i></div>
-        </article>
-        <article class="mini-card reveal">
-          <span class="mini-label">Picchi</span>
-          <h3>Picchi reali</h3>
-          <strong>21:40</strong>
-          <p>Quando la domanda cresce davvero.</p>
-          <div class="mini-insight"><span>Picco domanda</span><i aria-hidden="true"></i></div>
-        </article>
-        <article class="mini-card reveal">
-          <span class="mini-label">Prodotti</span>
-          <h3>Mix prodotti</h3>
-          <strong>Top 12</strong>
-          <p>Cosa viene scelto, cosa resta indietro.</p>
-          <div class="mini-insight"><span>Mix vincente</span><i aria-hidden="true"></i></div>
-        </article>
-        <article class="mini-card reveal">
-          <span class="mini-label">Azioni</span>
-          <h3>Decisioni migliori</h3>
-          <strong>4 leve</strong>
-          <p>Meno percezioni, più evidenze operative.</p>
-          <div class="mini-insight"><span>Prossime azioni</span><i aria-hidden="true"></i></div>
-        </article>
+      <div class="report-console reveal" aria-label="Piano post evento Orlay Pay">
+        <div class="report-head">
+          <div>
+            <span>Piano prossimo evento</span>
+            <strong>Summer Festival</strong>
+          </div>
+          <div class="report-head-badges">
+            <span class="demo-data-badge report-demo-badge">Dati demo</span>
+            <b>5 leve</b>
+          </div>
+        </div>
+        <div class="report-hero">
+          <div>
+            <div class="report-kicker">
+              <span class="report-module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 19V5"></path>
+                  <path d="M4 19h16"></path>
+                  <path d="M8 16v-5"></path>
+                  <path d="M12 16V8"></path>
+                  <path d="M16 16v-9"></path>
+                </svg>
+              </span>
+              <span>Performance per area</span>
+            </div>
+            <strong>Aree</strong>
+            <p>Quali zone hanno venduto di più, quali hanno rallentato e dove serviva più personale.</p>
+            <small>Decisione: spostare team, casse e punti ritiro dove la pressione sarà più alta.</small>
+          </div>
+          <svg viewBox="0 0 280 110" role="img" aria-label="Trend incassi post evento">
+            <path d="M6 86 C42 78 54 46 88 54 C126 63 138 18 174 30 C214 43 224 16 274 18"></path>
+          </svg>
+        </div>
+        <div class="report-grid">
+          <article>
+            <div class="report-card-top">
+              <span class="report-module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 8v5l3 2"></path>
+                </svg>
+              </span>
+              <span>Finestre di picco</span>
+            </div>
+            <strong>21:40</strong>
+            <p>Quando la domanda è salita e quali punti servizio sono diventati colli di bottiglia.</p>
+            <small>Decisione: anticipare turni, scorte e apertura corsie prima del picco.</small>
+            <i aria-hidden="true"><span></span></i>
+          </article>
+          <article>
+            <div class="report-card-top">
+              <span class="report-module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 3h12l-1 7a5 5 0 0 1-10 0L6 3Z"></path>
+                  <path d="M12 15v6"></path>
+                  <path d="M8 21h8"></path>
+                </svg>
+              </span>
+              <span>Mix prodotti</span>
+            </div>
+            <strong>Top vendite</strong>
+            <p>Quali prodotti food, beverage, VIP o merch hanno generato più ricavi.</p>
+            <small>Decisione: semplificare menu e promuovere gli item ad alta marginalità.</small>
+            <i aria-hidden="true"><span></span></i>
+          </article>
+          <article>
+            <div class="report-card-top">
+              <span class="report-module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 7h12l1 14H5L6 7Z"></path>
+                  <path d="M9 7a3 3 0 0 1 6 0"></path>
+                  <path d="M8 12h8"></path>
+                </svg>
+              </span>
+              <span>Pressione ritiro</span>
+            </div>
+            <strong>Attese</strong>
+            <p>Dove si sono accumulati gli ordini in attesa e quanto tempo ha richiesto il servizio.</p>
+            <small>Decisione: separare preparazione, consegna e code rapide nelle aree critiche.</small>
+            <i aria-hidden="true"><span></span></i>
+          </article>
+          <article>
+            <div class="report-card-top">
+              <span class="report-module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12l4 4L19 6"></path>
+                  <path d="M5 20h14"></path>
+                </svg>
+              </span>
+              <span>Azioni prossimo evento</span>
+            </div>
+            <strong>Priorità</strong>
+            <p>Raccomandazioni pratiche su personale, menu, layout dei ritiri e percorsi di servizio.</p>
+            <small>Decisione: trasformare il report in una checklist operativa per il team.</small>
+            <i aria-hidden="true"><span></span></i>
+          </article>
+        </div>
+        <div class="report-actions">
+          <span>Azioni per il prossimo evento</span>
+          <strong>Raccomandazioni pratiche su personale, menu, layout dei ritiri e percorsi di servizio.</strong>
+          <p>Ogni azione indica priorità, area coinvolta e impatto atteso, così produzione, team operativi e hospitality lavorano sullo stesso piano.</p>
+        </div>
       </div>
     </section>
 
     <section class="section-shell final-section" id="demo">
       <div class="final-copy reveal">
-        <p class="eyebrow">Demo Orlay Pay</p>
-        <h2>Vuoi capire dove il tuo evento sta perdendo vendite?</h2>
-        <p>Prenota una demo: analizziamo insieme flussi, punti bar, aree critiche e opportunità di ricavo.</p>
-        <a class="button primary" href="#demo-form">Richiedi una demo</a>
+        <p class="eyebrow">Revisione flussi evento</p>
+        <h2>Prenota una revisione di 30 minuti dei flussi del tuo evento.</h2>
+        <p>Mappiamo dimensione del pubblico, finestre di picco, bar, punti di ritiro, aree VIP, flussi merchandising e sistema attuale di ordini e pagamenti, poi ti mostriamo come Orlay Pay potrebbe funzionare nel tuo evento.</p>
       </div>
 
-      <form class="demo-form reveal" id="demo-form" data-demo-form>
+      <form class="demo-form reveal" id="demo-form" data-demo-form novalidate>
         <div class="form-row">
-          <label for="name">Nome</label>
+          <label for="name">Full Name</label>
           <input id="name" name="name" type="text" autocomplete="name" required>
         </div>
         <div class="form-row">
-          <label for="company">Azienda / venue</label>
+          <label for="company">Company / Venue</label>
           <input id="company" name="company" type="text" autocomplete="organization" required>
+        </div>
+        <div class="form-row">
+          <label for="role">Ruolo</label>
+          <input id="role" name="role" type="text" autocomplete="organization-title" required>
         </div>
         <div class="form-row">
           <label for="event-type">Tipo di evento</label>
           <input id="event-type" name="event-type" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="attendance">Affluenza prevista</label>
+          <input id="attendance" name="attendance" type="text" inputmode="numeric" required>
+        </div>
+        <div class="form-row">
+          <label for="service-points">Numero di punti di servizio</label>
+          <input id="service-points" name="service-points" type="text" inputmode="numeric" required>
+        </div>
+        <div class="form-row">
+          <label for="event-date">Data o stagione dell'evento</label>
+          <input id="event-date" name="event-date" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="current-setup">Sistema attuale di ordini / pagamenti</label>
+          <input id="current-setup" name="current-setup" type="text" required>
         </div>
         <div class="form-row">
           <label for="email">Email</label>
@@ -367,21 +847,60 @@
           <input id="phone" name="phone" type="tel" autocomplete="tel" required>
         </div>
         <div class="form-row full">
-          <label for="message">Messaggio opzionale</label>
-          <textarea id="message" name="message" rows="4"></textarea>
+          <label for="message">Cosa vuoi migliorare?</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
         </div>
-        <button class="button primary full" type="submit">Richiedi una demo</button>
-        <p class="privacy">Ti ricontattiamo solo per valutare il progetto Orlay Pay più adatto al tuo evento.</p>
+        <button class="button primary full form-submit" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+          <span>Prenota la revisione dei flussi</span>
+        </button>
+        <p class="privacy">Ti contattiamo solo per preparare una demo Orlay Pay sul tuo evento. Niente spam commerciale generico.</p>
         <p class="form-message" data-form-message role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <img src="assets/orlay-logo.png" alt="Orlay Pay" width="118" height="31">
-    <span>Continuità di vendita per eventi live ad alta affluenza.</span>
+  <footer class="site-footer" aria-label="Footer Orlay Pay">
+    <div class="footer-brand">
+      <img src="assets/images/orlay-logo.png" alt="Orlay Pay" width="118" height="31">
+      <p>Orlay Pay — ordini live, pagamenti e controllo dei ritiri per eventi ad alta affluenza.</p>
+      <a class="footer-contact" href="mailto:hello@orlaypay.com">hello@orlaypay.com</a>
+    </div>
+    <nav class="footer-links" aria-label="Link footer">
+      <div>
+        <h2>Prodotto</h2>
+        <a href="#soluzione">Come funziona</a>
+        <a href="#controllo">Controllo organizer</a>
+        <a href="#esperienza">Web app fan</a>
+        <a href="#staff">Flusso staff</a>
+        <a href="#analytics">Analytics evento</a>
+      </div>
+      <div>
+        <h2>Casi d'uso</h2>
+        <a href="#target">Festival</a>
+        <a href="#target">Stadi e arene</a>
+        <a href="#target">Hospitality e VIP</a>
+        <a href="#target">Food court</a>
+        <a href="#target">Merchandising</a>
+      </div>
+      <div>
+        <h2>Azienda</h2>
+        <a href="mailto:hello@orlaypay.com">Contatto</a>
+        <a href="#demo">Prenota una demo</a>
+        <span>Privacy policy</span>
+        <span>Termini</span>
+        <span>Sicurezza</span>
+      </div>
+    </nav>
   </footer>
 
-  <script src="script.js"></script>
+  <div class="copyright-bar" aria-label="Copyright">
+    <p>All rights reserved by <span aria-hidden="true">&copy;</span> Orlay Pay, 2026</p>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

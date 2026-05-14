@@ -1,8 +1,0 @@
-https://shreethemes.in/landrick/dashboard/index.html -O ./landrick-dashboard +shreethemes.in/landrick/* +*.css +*.js +*.png +*.jpg +*.jpeg +*.gif +*.svg +*.webp +*.woff +*.woff2 +fonts.googleapis.com/* +fonts.gstatic.com/* +cdn.jsdelivr.net/* +cdnjs.cloudflare.com/* -w -r5 -s0
-File generated automatically on Tue, 05 May 2026 17:40:59, do NOT edit
-
-To update a mirror, just launch httrack without any parameters
-The existing cache will be used (and modified)
-To have other options, retype all parameters and launch HTTrack
-To continue an interrupted mirror, just launch httrack without any parameters
-
